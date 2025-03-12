@@ -1,30 +1,30 @@
 
 import React from 'react';
-import { Download, MapPin, Route, Navigation } from 'lucide-react';
+import { Download, MapPin, Route, Navigation, Globe, Calendar, Compass, Users } from 'lucide-react';
 
 const steps = [
   {
-    icon: <Download className="h-12 w-12 text-white" />,
-    title: "Download Yatrik",
-    description: "Get started by downloading the Yatrik app on your iOS or Android device.",
+    icon: <Globe className="h-12 w-12 text-white" />,
+    title: "Choose Your Destination",
+    description: "Select from thousands of destinations across India including Jaipur, Delhi, Mathura, Vrindavan, and Agra.",
     bgColor: "bg-yatrik-primary"
   },
   {
-    icon: <MapPin className="h-12 w-12 text-white" />,
-    title: "Choose your destination",
-    description: "Select your travel destination or allow the app to detect your current location.",
+    icon: <Calendar className="h-12 w-12 text-white" />,
+    title: "Plan Your Trip",
+    description: "Create a personalized itinerary based on your preferences and interests.",
     bgColor: "bg-yatrik-blue"
   },
   {
-    icon: <Route className="h-12 w-12 text-white" />,
-    title: "Create your journey",
-    description: "Plan your perfect route with personalized points of interest and attractions.",
+    icon: <Compass className="h-12 w-12 text-white" />,
+    title: "Explore with Confidence",
+    description: "Access offline maps, audio guides, and local recommendations as you travel.",
     bgColor: "bg-yatrik-purple"
   },
   {
-    icon: <Navigation className="h-12 w-12 text-white" />,
-    title: "Start exploring",
-    description: "Follow the real-time navigation and enjoy your independent travel adventure.",
+    icon: <Users className="h-12 w-12 text-white" />,
+    title: "Stay Connected",
+    description: "Share your journey and connect with fellow travelers exploring India.",
     bgColor: "bg-yatrik-green"
   }
 ];

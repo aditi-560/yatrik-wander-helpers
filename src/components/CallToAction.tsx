@@ -18,6 +18,13 @@ const CallToAction = () => {
           <p className="text-lg md:text-xl text-yatrik-dark/90 mb-8 max-w-2xl mx-auto">
             Download Yatrik today and join thousands of travelers who have discovered the freedom of independent exploration in Jaipur, Delhi, Mathura, Vrindavan, Agra and beyond.
           </p>
+          <div className="flex flex-wrap justify-center gap-3 mb-8">
+            {['Jaipur', 'Delhi', 'Mathura', 'Vrindavan', 'Agra'].map((city, index) => (
+              <div key={index} className="bg-white/30 backdrop-blur-sm rounded-full px-4 py-1 text-sm font-medium">
+                {city}
+              </div>
+            ))}
+          </div>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button className="bg-white text-yatrik-dark hover:bg-white/90 px-8 py-6 text-lg">
               Download for iOS
