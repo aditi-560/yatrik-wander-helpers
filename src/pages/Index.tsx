@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
@@ -15,10 +14,10 @@ const Index = () => {
       const confettiCount = 60;
       const container = document.querySelector('body');
       const colors = [
+        '#FFD166', // yellow (now primary)
         '#FF3F8B', // pink
         '#FFA52C', // orange
         '#8B5CF6', // purple
-        '#FFD166', // yellow
         '#4CC9F0', // blue
         '#06D6A0'  // green
       ];
