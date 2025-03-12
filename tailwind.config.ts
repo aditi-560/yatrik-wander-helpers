@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -64,11 +63,15 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				yatrik: {
-					primary: '#8B5CF6',
-					secondary: '#6E59A5',
-					tertiary: '#D6BCFA',
-					light: '#F1F0FB',
+					primary: '#FF3F8B',
+					secondary: '#FFA52C',
+					tertiary: '#4DCCBD',
+					light: '#FFF4FB',
 					dark: '#1A1F2C',
+					purple: '#8B5CF6',
+					yellow: '#FFD166',
+					blue: '#4CC9F0',
+					green: '#06D6A0',
 				}
 			},
 			borderRadius: {

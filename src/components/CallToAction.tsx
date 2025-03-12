@@ -5,7 +5,7 @@ import { MapPin } from 'lucide-react';
 
 const CallToAction = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-yatrik-primary to-yatrik-secondary text-white">
+    <section className="py-16 md:py-24 bg-gradient-to-br from-yatrik-primary via-yatrik-purple to-yatrik-blue text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center justify-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6">
@@ -22,7 +22,7 @@ const CallToAction = () => {
             <Button className="bg-white text-yatrik-primary hover:bg-white/90 px-8 py-6 text-lg">
               Download for iOS
             </Button>
-            <Button className="bg-white text-yatrik-primary hover:bg-white/90 px-8 py-6 text-lg">
+            <Button className="bg-yatrik-yellow text-yatrik-dark hover:bg-yatrik-yellow/90 px-8 py-6 text-lg">
               Download for Android
             </Button>
           </div>
