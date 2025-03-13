@@ -3,10 +3,9 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { MapPin, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { destinationsList } from '@/data/destinations';
 
 const CallToAction = () => {
-  const cities = ["Jaipur", "Delhi", "Mathura", "Vrindavan", "Agra"];
-  
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-yatrik-yellow via-yatrik-orange/80 to-yatrik-primary/70 text-yatrik-dark relative overflow-hidden">
       {/* Decorative Elements */}
@@ -29,28 +28,26 @@ const CallToAction = () => {
           <p className="text-lg md:text-xl text-yatrik-dark/90 mb-8 max-w-2xl mx-auto">
             Download Yatrik today and join thousands of travelers who have discovered the freedom of independent exploration in these amazing destinations and beyond.
           </p>
+          
+          {/* Destination Links */}
           <div className="flex flex-wrap justify-center gap-4 mb-10">
-            {cities.map((city, index) => (
-              <div key={index} className={`
-                ${index % 2 === 0 ? 'bg-white/40' : 'bg-yatrik-dark/10'} 
-                backdrop-blur-sm rounded-full px-5 py-2 text-sm font-medium 
-                shadow-sm border border-white/30 hover:transform hover:scale-105 
-                transition-all duration-300 cursor-pointer
-              `}>
-                {city === "Mathura" || city === "Vrindavan" ? (
-                  <Link to="/mathura-vrindavan" className="flex items-center gap-1.5">
-                    <MapPin className="h-3.5 w-3.5" />
-                    {city}
-                  </Link>
-                ) : (
-                  <div className="flex items-center gap-1.5">
-                    <MapPin className="h-3.5 w-3.5" />
-                    {city}
-                  </div>
-                )}
-              </div>
+            {destinationsList.map((dest, index) => (
+              <Link 
+                key={index} 
+                to={`/destinations/${dest.id}`}
+                className={`
+                  ${index % 2 === 0 ? 'bg-white/40' : 'bg-yatrik-dark/10'} 
+                  backdrop-blur-sm rounded-full px-5 py-2 text-sm font-medium 
+                  shadow-sm border border-white/30 hover:transform hover:scale-105 
+                  transition-all duration-300 flex items-center gap-1.5
+                `}
+              >
+                <MapPin className="h-3.5 w-3.5" />
+                {dest.name}
+              </Link>
             ))}
           </div>
+          
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 relative">
             <Button className="bg-white text-yatrik-dark hover:bg-white/90 px-8 py-6 text-lg flex items-center gap-2 shadow-lg group">
               <Download className="h-5 w-5 group-hover:animate-bounce" />

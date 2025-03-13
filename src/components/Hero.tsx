@@ -3,37 +3,43 @@ import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { MapPin, Navigation, Globe, Route, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { destinationsList } from '@/data/destinations';
 
 const destinations = [
   { 
     name: "Jaipur", 
     nickname: "Pink City",
     image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
-    color: "bg-yatrik-yellow/20"
+    color: "bg-yatrik-yellow/20",
+    id: "jaipur"
   },
   { 
     name: "Delhi", 
     nickname: "Heart of India",
     image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80",
-    color: "bg-yatrik-blue/20"
+    color: "bg-yatrik-blue/20",
+    id: "delhi"
   },
   { 
     name: "Mathura", 
     nickname: "Birthplace of Krishna",
     image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616?auto=format&fit=crop&q=80",
-    color: "bg-yatrik-green/20"
+    color: "bg-yatrik-green/20",
+    id: "mathura-vrindavan"
   },
   { 
     name: "Vrindavan", 
     nickname: "Land of Krishna",
     image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185?auto=format&fit=crop&q=80",
-    color: "bg-yatrik-primary/20"
+    color: "bg-yatrik-primary/20",
+    id: "mathura-vrindavan"
   },
   { 
     name: "Agra", 
     nickname: "City of Taj Mahal",
     image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
-    color: "bg-yatrik-secondary/20"
+    color: "bg-yatrik-secondary/20",
+    id: "agra"
   }
 ];
 
@@ -76,18 +82,22 @@ const Hero = () => {
             {/* Popular Destinations */}
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {destinations.map((destination, index) => (
-                <div 
+                <Link 
                   key={index} 
+                  to={`/destinations/${destination.id}`}
                   className={`${index === currentDestIndex ? 'bg-yatrik-yellow text-yatrik-dark' : 'bg-white/80'} 
                     backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium border border-yatrik-yellow/30 
                     flex items-center gap-1 cursor-pointer transition-all duration-300`}
-                  onClick={() => setCurrentDestIndex(index)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setCurrentDestIndex(index);
+                  }}
                 >
                   <MapPin className={`h-3 w-3 ${index === currentDestIndex ? 'text-yatrik-dark' : 'text-yatrik-yellow'}`} />
                   <span className={index === currentDestIndex ? 'text-yatrik-dark' : 'text-yatrik-dark/80'}>
                     {destination.name}
                   </span>
-                </div>
+                </Link>
               ))}
             </div>
             
@@ -95,9 +105,9 @@ const Hero = () => {
               <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark px-8 py-6 text-lg">
                 Download Now
               </Button>
-              <Link to="/mathura-vrindavan">
+              <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
                 <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark hover:bg-yatrik-yellow/10 px-8 py-6 text-lg w-full">
-                  Explore Mathura & Vrindavan
+                  Explore {destinations[currentDestIndex].name}
                 </Button>
               </Link>
             </div>
