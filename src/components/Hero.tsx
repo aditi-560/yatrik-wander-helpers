@@ -8,31 +8,31 @@ const destinations = [
   { 
     name: "Jaipur", 
     nickname: "Pink City",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
     color: "bg-yatrik-yellow/20"
   },
   { 
     name: "Delhi", 
     nickname: "Heart of India",
-    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5",
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80",
     color: "bg-yatrik-blue/20"
   },
   { 
     name: "Mathura", 
     nickname: "Birthplace of Krishna",
-    image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616",
+    image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616?auto=format&fit=crop&q=80",
     color: "bg-yatrik-green/20"
   },
   { 
     name: "Vrindavan", 
     nickname: "Land of Krishna",
-    image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185",
+    image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185?auto=format&fit=crop&q=80",
     color: "bg-yatrik-primary/20"
   },
   { 
     name: "Agra", 
     nickname: "City of Taj Mahal",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
     color: "bg-yatrik-secondary/20"
   }
 ];
@@ -123,14 +123,18 @@ const Hero = () => {
           {/* App preview */}
           <div className="flex-1 relative">
             <div className="relative z-10 bg-white p-2 rounded-3xl shadow-xl max-w-xs mx-auto">
-              <div className="rounded-2xl overflow-hidden border border-slate-100 relative">
+              <div className="rounded-2xl overflow-hidden border border-slate-100 relative aspect-[9/16]">
                 {destinations.map((dest, index) => (
-                  <img 
+                  <div 
                     key={index}
-                    src={dest.image} 
-                    alt={`Yatrik app preview showing ${dest.name}`} 
-                    className={`w-full aspect-[9/16] object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentDestIndex ? 'opacity-100' : 'opacity-0'}`}
-                  />
+                    className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${index === currentDestIndex ? 'opacity-100' : 'opacity-0'}`}
+                  >
+                    <img 
+                      src={dest.image} 
+                      alt={`Yatrik app preview showing ${dest.name}`} 
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                 ))}
                 
                 {/* Navigation controls */}

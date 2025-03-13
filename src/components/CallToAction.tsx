@@ -66,11 +66,19 @@ const CallToAction = () => {
       </div>
       
       {/* Phone mockups */}
-      <div className="hidden lg:block absolute -bottom-20 left-10 w-56 h-80 bg-white rounded-3xl shadow-2xl transform rotate-12 border-8 border-white">
-        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41" alt="App preview" className="w-full h-full object-cover rounded-2xl" />
+      <div className="hidden lg:block absolute -bottom-20 left-10 w-56 h-80 bg-white rounded-3xl shadow-2xl transform rotate-12 border-8 border-white overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80" 
+          alt="App preview" 
+          className="w-full h-full object-cover rounded-2xl"
+        />
       </div>
-      <div className="hidden lg:block absolute -bottom-24 right-10 w-56 h-80 bg-white rounded-3xl shadow-2xl transform -rotate-12 border-8 border-white">
-        <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7" alt="App preview" className="w-full h-full object-cover rounded-2xl" />
+      <div className="hidden lg:block absolute -bottom-24 right-10 w-56 h-80 bg-white rounded-3xl shadow-2xl transform -rotate-12 border-8 border-white overflow-hidden">
+        <img 
+          src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&q=80" 
+          alt="App preview" 
+          className="w-full h-full object-cover rounded-2xl"
+        />
       </div>
     </section>
   );
