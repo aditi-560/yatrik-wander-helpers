@@ -15,7 +15,7 @@ const Destination = () => {
       <>
         <div className="fixed top-4 left-4 z-50">
           <Link to="/">
-            <Button variant="outline" className="rounded-full bg-white/80 backdrop-blur-sm shadow-md">
+            <Button variant="outline" className="rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white/90 transition-all duration-300">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back
             </Button>

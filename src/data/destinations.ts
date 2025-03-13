@@ -97,7 +97,7 @@ export const mathuraVrindavanData: DestinationDetails = {
   name: "Mathura & Vrindavan",
   nickname: "Land of Krishna",
   description: "Mathura and Vrindavan, located in Uttar Pradesh, are twin sacred cities intimately connected to Lord Krishna. Mathura is revered as the birthplace of Krishna, while Vrindavan is where he spent his childhood. These ancient cities are dotted with hundreds of temples and sacred sites that attract millions of devotees and spiritual seekers annually. The air is filled with spiritual energy, devotional music, and the constant chanting of 'Radhe Radhe' and 'Hare Krishna'.",
-  headerImage: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616?auto=format&fit=crop&q=80",
+  headerImage: "https://images.unsplash.com/photo-1625658374343-10a664d9b68b?auto=format&fit=crop&q=80",
   attractions: [
     {
       name: "Krishna Janmabhoomi Temple",
