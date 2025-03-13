@@ -1,24 +1,69 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { MapPin, Navigation, Globe, Route } from 'lucide-react';
+import { MapPin, Navigation, Globe, Route, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const destinations = [
-  { name: "Jaipur", nickname: "Pink City" },
-  { name: "Delhi", nickname: "Heart of India" },
-  { name: "Mathura", nickname: "Birthplace of Krishna" },
-  { name: "Vrindavan", nickname: "Land of Krishna" },
-  { name: "Agra", nickname: "City of Taj Mahal" }
+  { 
+    name: "Jaipur", 
+    nickname: "Pink City",
+    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41",
+    color: "bg-yatrik-yellow/20"
+  },
+  { 
+    name: "Delhi", 
+    nickname: "Heart of India",
+    image: "https://images.unsplash.com/photo-1587474260584-136574528ed5",
+    color: "bg-yatrik-blue/20"
+  },
+  { 
+    name: "Mathura", 
+    nickname: "Birthplace of Krishna",
+    image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616",
+    color: "bg-yatrik-green/20"
+  },
+  { 
+    name: "Vrindavan", 
+    nickname: "Land of Krishna",
+    image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185",
+    color: "bg-yatrik-primary/20"
+  },
+  { 
+    name: "Agra", 
+    nickname: "City of Taj Mahal",
+    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    color: "bg-yatrik-secondary/20"
+  }
 ];
 
 const Hero = () => {
+  const [currentDestIndex, setCurrentDestIndex] = useState(0);
+  const currentDestination = destinations[currentDestIndex];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDestIndex((prev) => (prev + 1) % destinations.length);
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
+  const goToNextDestination = () => {
+    setCurrentDestIndex((prev) => (prev + 1) % destinations.length);
+  };
+
+  const goToPrevDestination = () => {
+    setCurrentDestIndex((prev) => (prev - 1 + destinations.length) % destinations.length);
+  };
+
   return (
     <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-r from-yatrik-yellow/20 via-yatrik-primary/10 to-yatrik-blue/10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Text content */}
           <div className="flex-1 space-y-6 text-center md:text-left">
-            <div className="inline-block bg-yatrik-yellow/20 px-4 py-1.5 rounded-full">
+            <div className={`inline-block ${currentDestination.color} px-4 py-1.5 rounded-full transition-colors duration-500`}>
               <p className="text-sm font-medium text-yatrik-dark">Travel without limits</p>
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-yatrik-dark leading-tight">
@@ -31,9 +76,17 @@ const Hero = () => {
             {/* Popular Destinations */}
             <div className="flex flex-wrap gap-2 justify-center md:justify-start">
               {destinations.map((destination, index) => (
-                <div key={index} className="bg-white/80 backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium border border-yatrik-yellow/30 flex items-center gap-1">
-                  <MapPin className="h-3 w-3 text-yatrik-yellow" />
-                  <span className="text-yatrik-dark">{destination.name}</span>
+                <div 
+                  key={index} 
+                  className={`${index === currentDestIndex ? 'bg-yatrik-yellow text-yatrik-dark' : 'bg-white/80'} 
+                    backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium border border-yatrik-yellow/30 
+                    flex items-center gap-1 cursor-pointer transition-all duration-300`}
+                  onClick={() => setCurrentDestIndex(index)}
+                >
+                  <MapPin className={`h-3 w-3 ${index === currentDestIndex ? 'text-yatrik-dark' : 'text-yatrik-yellow'}`} />
+                  <span className={index === currentDestIndex ? 'text-yatrik-dark' : 'text-yatrik-dark/80'}>
+                    {destination.name}
+                  </span>
                 </div>
               ))}
             </div>
@@ -42,9 +95,11 @@ const Hero = () => {
               <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark px-8 py-6 text-lg">
                 Download Now
               </Button>
-              <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark hover:bg-yatrik-yellow/10 px-8 py-6 text-lg">
-                Learn More
-              </Button>
+              <Link to="/mathura-vrindavan">
+                <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark hover:bg-yatrik-yellow/10 px-8 py-6 text-lg w-full">
+                  Explore Mathura & Vrindavan
+                </Button>
+              </Link>
             </div>
             
             {/* Rating badges */}
@@ -67,13 +122,56 @@ const Hero = () => {
           
           {/* App preview */}
           <div className="flex-1 relative">
-            <div className="relative z-10 bg-white p-2 rounded-3xl shadow-xl max-w-xs mx-auto animate-float">
-              <div className="rounded-2xl overflow-hidden border border-slate-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1599661046289-e31897846e41" 
-                  alt="Yatrik app preview showing Jaipur's Hawa Mahal" 
-                  className="w-full aspect-[9/16] object-cover"
-                />
+            <div className="relative z-10 bg-white p-2 rounded-3xl shadow-xl max-w-xs mx-auto">
+              <div className="rounded-2xl overflow-hidden border border-slate-100 relative">
+                {destinations.map((dest, index) => (
+                  <img 
+                    key={index}
+                    src={dest.image} 
+                    alt={`Yatrik app preview showing ${dest.name}`} 
+                    className={`w-full aspect-[9/16] object-cover absolute inset-0 transition-opacity duration-1000 ${index === currentDestIndex ? 'opacity-100' : 'opacity-0'}`}
+                  />
+                ))}
+                
+                {/* Navigation controls */}
+                <div className="absolute inset-y-0 left-2 flex items-center">
+                  <button 
+                    onClick={goToPrevDestination} 
+                    className="bg-white/70 hover:bg-white backdrop-blur-sm p-1.5 rounded-full shadow-md"
+                  >
+                    <ChevronLeft className="h-5 w-5 text-yatrik-dark" />
+                  </button>
+                </div>
+                <div className="absolute inset-y-0 right-2 flex items-center">
+                  <button 
+                    onClick={goToNextDestination} 
+                    className="bg-white/70 hover:bg-white backdrop-blur-sm p-1.5 rounded-full shadow-md"
+                  >
+                    <ChevronRight className="h-5 w-5 text-yatrik-dark" />
+                  </button>
+                </div>
+                
+                {/* Current destination indicator */}
+                <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-1">
+                  {destinations.map((_, index) => (
+                    <div 
+                      key={index} 
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        index === currentDestIndex 
+                          ? 'w-6 bg-yatrik-yellow' 
+                          : 'w-1.5 bg-white/70'
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                {/* Destination info overlay */}
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <div className="text-white">
+                    <h3 className="font-bold">{currentDestination.name}</h3>
+                    <p className="text-xs opacity-90">{currentDestination.nickname}</p>
+                  </div>
+                </div>
               </div>
               <div className="absolute -top-4 -right-4 bg-yatrik-yellow text-yatrik-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                 NEW
@@ -83,15 +181,15 @@ const Hero = () => {
             {/* Floating destinations */}
             <div className="absolute top-20 -left-8 bg-yatrik-green text-white p-3 rounded-xl shadow-lg hidden md:flex items-center space-x-2 animate-float" style={{ animationDelay: '0.5s' }}>
               <MapPin className="h-5 w-5 text-white" />
-              <span className="text-sm font-medium">Jaipur</span>
+              <span className="text-sm font-medium">{destinations[0].name}</span>
             </div>
             <div className="absolute bottom-24 -right-8 bg-yatrik-primary text-white p-3 rounded-xl shadow-lg hidden md:flex items-center space-x-2 animate-float" style={{ animationDelay: '1s' }}>
               <Route className="h-5 w-5 text-white" />
-              <span className="text-sm font-medium">Delhi</span>
+              <span className="text-sm font-medium">{destinations[1].name}</span>
             </div>
             <div className="absolute bottom-4 -left-4 bg-yatrik-yellow text-yatrik-dark p-3 rounded-xl shadow-lg hidden md:flex items-center space-x-2 animate-float" style={{ animationDelay: '1.5s' }}>
               <Globe className="h-5 w-5 text-yatrik-dark" />
-              <span className="text-sm font-medium">Agra</span>
+              <span className="text-sm font-medium">{destinations[4].name}</span>
             </div>
             
             {/* Background decoration */}
