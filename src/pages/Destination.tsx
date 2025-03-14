@@ -4,7 +4,8 @@ import { useParams, Navigate, Link } from 'react-router-dom';
 import DestinationTemplate from '@/components/DestinationTemplate';
 import { allDestinations } from '@/data/destinations';
 import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Home } from 'lucide-react';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const Destination = () => {
   const { id } = useParams<{ id: string }>();
@@ -13,14 +14,25 @@ const Destination = () => {
   if (id && allDestinations[id]) {
     return (
       <>
-        <div className="fixed top-4 left-4 z-50">
+        <div className="fixed top-4 left-4 z-50 flex gap-2">
           <Link to="/">
-            <Button variant="outline" className="rounded-full bg-white/80 backdrop-blur-sm shadow-md hover:bg-white/90 transition-all duration-300">
+            <Button variant="outline" className="rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back
             </Button>
           </Link>
+          <Link to="/">
+            <Button variant="outline" className="rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
+              <Home className="h-4 w-4 mr-2" />
+              Home
+            </Button>
+          </Link>
         </div>
+        
+        <div className="fixed top-4 right-4 z-50">
+          <ThemeToggle />
+        </div>
+        
         <DestinationTemplate destination={allDestinations[id]} />
       </>
     );

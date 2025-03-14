@@ -8,15 +8,18 @@ import TravelSafety from '@/components/TravelSafety';
 import Testimonials from '@/components/Testimonials';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import { useTheme } from '@/components/ThemeProvider';
 
 const Index = () => {
+  const { theme } = useTheme();
+  
   useEffect(() => {
     // Create confetti elements for Holi-inspired effect
     const createConfetti = () => {
       const confettiCount = 60;
       const container = document.querySelector('body');
       const colors = [
-        '#FFD166', // yellow (now primary)
+        '#FFD166', // yellow
         '#FF3F8B', // pink
         '#FFA52C', // orange
         '#8B5CF6', // purple
@@ -38,7 +41,7 @@ const Index = () => {
         confetti.style.position = 'fixed';
         confetti.style.top = '-10px';
         confetti.style.zIndex = '1';
-        confetti.style.opacity = '0.7';
+        confetti.style.opacity = theme === 'dark' ? '0.5' : '0.7';
         confetti.style.animation = `fall ${Math.random() * 5 + 5}s linear forwards`;
         
         container?.appendChild(confetti);
@@ -59,7 +62,7 @@ const Index = () => {
         0% {
           top: -10px;
           transform: translateX(0) rotate(0deg);
-          opacity: 0.7;
+          opacity: ${theme === 'dark' ? '0.5' : '0.7'};
         }
         100% {
           top: 100vh;
@@ -79,12 +82,12 @@ const Index = () => {
       clearInterval(confettiInterval);
       // Clean up any remaining confetti and the style element
       document.querySelectorAll('.confetti').forEach(el => el.remove());
-      document.head.removeChild(style);
+      style.remove();
     };
-  }, []);
+  }, [theme]);
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background dark:bg-yatrik-darkBg text-foreground dark:text-yatrik-darkText theme-transition">
       <Navbar />
       <main>
         <Hero />

@@ -7,6 +7,29 @@ export const jaipurData: DestinationDetails = {
   nickname: "The Pink City",
   description: "Jaipur, the capital of Rajasthan, is known as the 'Pink City' due to the distinctive terracotta pink color of its buildings. Founded in 1727 by Maharaja Sawai Jai Singh II, the city is a vibrant blend of royal heritage and modern urban planning. With its magnificent palaces, colorful bazaars, and rich cultural traditions, Jaipur forms an essential part of India's famous Golden Triangle tourist circuit.",
   headerImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
+  history: "Jaipur was founded in 1727 by Maharaja Sawai Jai Singh II, who was the ruler of Amber. The city was planned according to the principles of Vastu Shastra and Shilpa Shastra, ancient Indian architectural texts. In 1876, the city was painted pink to welcome Prince Albert, and the tradition has been maintained since then.",
+  bestTimeToVisit: "October to March when the weather is pleasant with temperatures ranging from 8°C to 32°C. Avoid summers (April to June) as temperatures can soar above 45°C.",
+  howToReach: {
+    byAir: "Jaipur International Airport is well-connected to major Indian cities and some international destinations.",
+    byRail: "Jaipur Railway Station is connected to all major cities in India through regular train services.",
+    byRoad: "Excellent road connectivity with Delhi (5-6 hours), Agra (4-5 hours), and other major cities in North India."
+  },
+  localCuisine: [
+    {
+      name: "Dal Baati Churma",
+      description: "A traditional Rajasthani dish consisting of baked wheat balls, lentil curry, and a sweet crumbled wheat mixture."
+    },
+    {
+      name: "Pyaaz Kachori",
+      description: "A deep-fried pastry filled with spiced onions, a popular street food and breakfast item in Jaipur."
+    },
+    {
+      name: "Ghewar",
+      description: "A disc-shaped sweet cake made with flour and soaked in sugar syrup, especially popular during festivals."
+    }
+  ],
+  accommodation: "Jaipur offers a wide range of accommodation options from luxury heritage hotels (converted palaces) to budget guesthouses. The areas around the Old City and C-Scheme are popular places to stay for tourists.",
+  budget: "A mid-range budget of ₹2,500-5,000 per day should be sufficient for comfortable accommodation, meals, and local sightseeing. Heritage hotels and luxury experiences can increase the budget significantly.",
   attractions: [
     {
       name: "Hawa Mahal",
@@ -55,6 +78,29 @@ export const delhiData: DestinationDetails = {
   nickname: "Heart of India",
   description: "Delhi, India's capital territory, is a massive metropolitan area in the country's north. As the seat of multiple empires throughout history, Delhi showcases an incredible fusion of ancient monuments and modern development. The city is divided into Old Delhi, the historic heart, and New Delhi, the planned capital built during British rule. Delhi serves as a gateway to India's rich cultural heritage and its emerging future.",
   headerImage: "https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&q=80",
+  history: "Delhi has been continuously inhabited since the 6th century BCE and has served as the capital of various empires. It has been destroyed and rebuilt multiple times, with each ruling dynasty leaving its architectural mark. The city has witnessed the rise and fall of many empires including the Delhi Sultanate, the Mughals, and the British.",
+  bestTimeToVisit: "October to March when the weather is pleasant. Winter (December-January) can be quite cold with fog, while summers (April-June) are extremely hot with temperatures exceeding 45°C.",
+  howToReach: {
+    byAir: "Indira Gandhi International Airport is one of the busiest airports in Asia and is well-connected to destinations worldwide.",
+    byRail: "New Delhi Railway Station, Old Delhi Railway Station, and Hazrat Nizamuddin Railway Station connect Delhi to all major cities in India.",
+    byRoad: "Delhi is connected to all major cities in North India through a network of national highways."
+  },
+  localCuisine: [
+    {
+      name: "Chole Bhature",
+      description: "A combination of spicy chickpea curry (chole) and deep-fried bread (bhature), a popular breakfast dish."
+    },
+    {
+      name: "Paranthewali Gali",
+      description: "A famous street in Old Delhi known for its stuffed paranthas (Indian flatbread) with various fillings."
+    },
+    {
+      name: "Daulat ki Chaat",
+      description: "A unique winter dessert made of milk foam, topped with pistachios and saffron, found in the streets of Old Delhi."
+    }
+  ],
+  accommodation: "Delhi offers accommodation options for all budgets. Connaught Place, Karol Bagh, and Paharganj are popular areas for budget travelers, while Lutyens' Delhi and South Delhi cater to luxury travelers.",
+  budget: "A budget of ₹3,000-6,000 per day is recommended for comfortable mid-range accommodation, meals, and local transportation. Delhi Metro is an efficient and economical way to get around the city.",
   attractions: [
     {
       name: "Red Fort",
@@ -98,6 +144,29 @@ export const mathuraVrindavanData: DestinationDetails = {
   nickname: "Land of Krishna",
   description: "Mathura and Vrindavan, located in Uttar Pradesh, are twin sacred cities intimately connected to Lord Krishna. Mathura is revered as the birthplace of Krishna, while Vrindavan is where he spent his childhood. These ancient cities are dotted with hundreds of temples and sacred sites that attract millions of devotees and spiritual seekers annually. The air is filled with spiritual energy, devotional music, and the constant chanting of 'Radhe Radhe' and 'Hare Krishna'.",
   headerImage: "https://images.unsplash.com/photo-1625658374343-10a664d9b68b?auto=format&fit=crop&q=80",
+  history: "Mathura has a history dating back to at least 600 BCE and was an important city during the Mauryan and Kushan periods. According to Hindu mythology, it is the birthplace of Lord Krishna. Vrindavan is associated with Krishna's childhood and youth, where he spent time with Radha and the gopis. The town was rediscovered in the 16th century by Chaitanya Mahaprabhu.",
+  bestTimeToVisit: "October to March for pleasant weather. Festive periods like Holi (February-March) and Janmashtami (August) are particularly vibrant but extremely crowded.",
+  howToReach: {
+    byAir: "The nearest airport is at Agra (67 km from Mathura) or Delhi (160 km from Mathura).",
+    byRail: "Mathura Junction is well-connected to major cities like Delhi, Mumbai, Kolkata, and Chennai.",
+    byRoad: "Regular bus services connect Mathura and Vrindavan to Delhi, Agra, and other cities in Uttar Pradesh."
+  },
+  localCuisine: [
+    {
+      name: "Pedas",
+      description: "A special milk-based sweet for which Mathura is famous across India."
+    },
+    {
+      name: "Chhappan Bhog",
+      description: "A grand offering of 56 different food items prepared for Lord Krishna, especially during festivals."
+    },
+    {
+      name: "Lassi",
+      description: "A yogurt-based drink often flavored with fruits or spices, popular throughout the region."
+    }
+  ],
+  accommodation: "Both cities offer a range of accommodation from luxury hotels to budget ashrams and guesthouses. Staying in a traditional ashram can provide a more authentic spiritual experience, though with basic amenities.",
+  budget: "A budget of ₹1,500-3,000 per day should be sufficient for comfortable accommodation, meals, and temple visits. Pilgrimage packages are also available from various tour operators.",
   attractions: [
     {
       name: "Krishna Janmabhoomi Temple",
@@ -152,6 +221,29 @@ export const agraData: DestinationDetails = {
   nickname: "City of Taj Mahal",
   description: "Agra, located on the banks of the Yamuna River in Uttar Pradesh, is home to the iconic Taj Mahal. Once the capital of the Mughal Empire, the city is a treasure trove of magnificent Mughal-era architecture and history. Beyond the Taj, Agra boasts several other UNESCO World Heritage sites, showcasing the artistic and cultural brilliance of the Mughal era. The city combines its grand historical legacy with the hustle and bustle of a modern Indian city.",
   headerImage: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
+  history: "Agra rose to prominence during the Mughal era, particularly under Emperor Akbar who made it his capital in 1558. It remained the capital of the Mughal Empire until 1648 when Shah Jahan shifted it to Delhi. The city's golden age was during the reigns of Akbar, Jahangir, and Shah Jahan, who built numerous monuments including the Taj Mahal, a mausoleum for Shah Jahan's beloved wife Mumtaz Mahal.",
+  bestTimeToVisit: "October to March when the weather is pleasant and ideal for sightseeing. Summers (April to June) are extremely hot, and the monsoon (July to September) can make touring difficult.",
+  howToReach: {
+    byAir: "Agra Airport has limited connectivity. The nearest major airport is in Delhi (230 km).",
+    byRail: "Agra Cantt and Agra Fort railway stations are well-connected to major cities across India.",
+    byRoad: "Excellent road connectivity with Delhi (3-4 hours via Yamuna Expressway), Jaipur (4-5 hours), and other major cities."
+  },
+  localCuisine: [
+    {
+      name: "Petha",
+      description: "A translucent soft candy made from ash gourd, unique to Agra and available in various flavors."
+    },
+    {
+      name: "Dalmoth",
+      description: "A savory snack mix consisting of fried lentils, nuts, and spices, popular as a tea-time snack."
+    },
+    {
+      name: "Mughlai Cuisine",
+      description: "Rich, aromatic dishes with roots in Mughal royal kitchens, featuring meat dishes, biryanis, and kebabs."
+    }
+  ],
+  accommodation: "Agra offers a range of accommodation options from luxury hotels with Taj Mahal views to budget guesthouses. The areas of Tajganj (near Taj Mahal) and Sadar Bazaar are popular places to stay.",
+  budget: "A mid-range budget of ₹2,500-5,000 per day would cover comfortable accommodation, meals, and entry tickets to monuments. Note that the entry fee for the Taj Mahal is significantly higher for foreign tourists.",
   attractions: [
     {
       name: "Taj Mahal",
