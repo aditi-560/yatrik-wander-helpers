@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -10,6 +9,7 @@ import FestivalsGrid from '@/components/destination/FestivalsGrid';
 import TravelTips from '@/components/destination/TravelTips';
 import Accommodation from '@/components/destination/Accommodation';
 import AppCTA from '@/components/destination/AppCTA';
+import DestinationContent from '@/components/destination/DestinationContent';
 
 export interface DestinationDetails {
   name: string;
@@ -56,37 +56,7 @@ const DestinationTemplate: React.FC<DestinationTemplateProps> = ({ destination }
           nickname={destination.nickname} 
           headerImage={destination.headerImage} 
         />
-
-        <DestinationOverview 
-          description={destination.description}
-          bestTimeToVisit={destination.bestTimeToVisit}
-          history={destination.history}
-          howToReach={destination.howToReach}
-          budget={destination.budget}
-        />
-
-        <AttractionsGrid attractions={destination.attractions} />
-
-        {destination.localCuisine && destination.localCuisine.length > 0 && (
-          <LocalCuisine 
-            destinationName={destination.name} 
-            cuisineItems={destination.localCuisine} 
-          />
-        )}
-
-        {destination.festivals && destination.festivals.length > 0 && (
-          <FestivalsGrid festivals={destination.festivals} />
-        )}
-
-        {destination.tips && destination.tips.length > 0 && (
-          <TravelTips tips={destination.tips} />
-        )}
-
-        {destination.accommodation && (
-          <Accommodation accommodationInfo={destination.accommodation} />
-        )}
-
-        <AppCTA destinationName={destination.name} />
+        <DestinationContent destination={destination} />
       </div>
       <Footer />
     </>

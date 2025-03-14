@@ -1,5 +1,8 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Home } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import CallToAction from '@/components/CallToAction';
@@ -8,6 +11,8 @@ import StatsSection from '@/components/mathura/StatsSection';
 import AttractionsSection from '@/components/mathura/AttractionsSection';
 import FestivalCalendar from '@/components/mathura/FestivalCalendar';
 import TipsSection from '@/components/mathura/TipsSection';
+import ThemeToggle from '@/components/ThemeToggle';
+import MathuraHeader from '@/components/mathura/MathuraHeader';
 import { AttractionProps } from '@/components/mathura/AttractionCard';
 
 const attractions: AttractionProps[] = [
@@ -71,13 +76,14 @@ const MathuraVrindavan = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white via-yellow-50/50 to-white dark:from-yatrik-darkBg dark:via-yatrik-darkBg/95 dark:to-yatrik-darkBg theme-transition">
       <Navbar />
+      <MathuraHeader />
       <main>
         <HeroSection />
         <StatsSection />
         <AttractionsSection attractions={attractions} />
         <FestivalCalendar />
         <TipsSection />
-        <CallToAction />
+        <CallToAction isMathuraPage={true} />
       </main>
       <Footer />
     </div>
