@@ -106,7 +106,9 @@ const Hero = () => {
                 Download Now
               </Button>
               <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
-                <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark hover:bg-yatrik-yellow/10 px-8 py-6 text-lg w-full">
+                <Button 
+                  className="bg-yatrik-purple hover:bg-yatrik-purple/90 text-white border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:shadow-yatrik-purple/40 hover:shadow-md dark:text-white dark:border-0 dark:hover:bg-yatrik-purple/80"
+                >
                   Explore {destinations[currentDestIndex].name}
                 </Button>
               </Link>
