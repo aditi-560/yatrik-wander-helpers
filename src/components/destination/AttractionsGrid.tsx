@@ -18,7 +18,7 @@ const AttractionsGrid: React.FC<AttractionsGridProps> = ({ attractions }) => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-center relative inline-block">
-            <span className="relative z-10 dark:text-white">Must Visit Places</span>
+            <span className="relative z-10 text-yatrik-dark dark:text-white theme-transition">Must Visit Places</span>
             <div className="absolute bottom-0 left-0 w-full h-3 bg-yatrik-yellow/30 dark:bg-yatrik-yellow/20 -z-0"></div>
           </h2>
         </div>
@@ -41,8 +41,8 @@ const AttractionsGrid: React.FC<AttractionsGridProps> = ({ attractions }) => {
                 </div>
               </div>
               <div className="p-5 border-t-4 border-yatrik-yellow">
-                <h3 className="text-xl font-bold mb-2 dark:text-white">{attraction.name}</h3>
-                <p className="text-slate-600 dark:text-gray-400 text-sm">{attraction.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-yatrik-dark dark:text-white theme-transition">{attraction.name}</h3>
+                <p className="text-slate-600 dark:text-gray-300 text-sm theme-transition">{attraction.description}</p>
               </div>
             </div>
           ))}

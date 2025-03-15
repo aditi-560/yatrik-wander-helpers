@@ -28,7 +28,7 @@ export const mathuraVrindavanData: DestinationDetails = {
       description: "A yogurt-based drink often flavored with fruits or spices, popular throughout the region."
     }
   ],
-  accommodation: "Both cities offer a range of accommodation from luxury hotels to budget ashrams and guesthouses. Staying in a traditional ashram can provide a more authentic spiritual experience, though with basic amenities.",
+  accommodation: "Both cities offer a range of accommodation from luxury hotels to budget ashrams and guesthouses. Staying in a traditional ashram can provide a more authentic spiritual experience, though with basic amenities. In Vrindavan, ISKCON Guest House, MVT Guesthouse, and Nidhivan Sarovar Portico offer comfortable stays. In Mathura, Hotel Brijwasi Royal, Krishna Palace, and Radha Ashok provide good options for visitors seeking modern facilities.",
   budget: "A budget of ₹1,500-3,000 per day should be sufficient for comfortable accommodation, meals, and temple visits. Pilgrimage packages are also available from various tour operators.",
   attractions: [
     {
@@ -38,7 +38,7 @@ export const mathuraVrindavanData: DestinationDetails = {
     },
     {
       name: "Banke Bihari Temple",
-      description: "One of Vrindavan's most revered temples, known for its enchanting black marble idol of Krishna in his 'tribhanga' pose. The temple is famous for its unique darshan style where the deity is hidden and revealed by a curtain every few minutes, creating an atmosphere of divine anticipation.",
+      description: "One of Vrindavan's most revered temples, known for its enchanting black marble idol of Krishna in his 'tribhanga' pose. Built in 1864 by Swami Haridas, the temple follows the Rajasthani architectural style. The temple is famous for its unique darshan style where the deity is hidden and revealed by a curtain every few minutes, creating an atmosphere of divine anticipation. This practice is believed to protect devotees from being overwhelmed by the deity's beauty. The temple becomes especially vibrant during Janmashtami, Holi, and Jhulan Yatra festivals, when thousands of devotees gather to celebrate.",
       image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185?auto=format&fit=crop&q=80",
     },
     {
@@ -52,13 +52,13 @@ export const mathuraVrindavanData: DestinationDetails = {
       image: "https://images.unsplash.com/photo-1555791019-72d3af01da82?auto=format&fit=crop&q=80",
     },
     {
-      name: "Gita Mandir",
-      description: "Built by the Birla family, this beautiful temple is dedicated to the teachings of the Bhagavad Gita. The entire text of the Bhagavad Gita is inscribed on its walls. The temple houses a majestic idol of Krishna with Arjuna, symbolizing the divine discourse. Located on the Mathura-Vrindavan road.",
+      name: "Prem Mandir",
+      description: "A magnificent white marble temple dedicated to Radha-Krishna and Sita-Ram, showcasing stunning architecture and intricate carvings. Built by Jagadguru Kripalu Maharaj and inaugurated in 2012, it spans 54 acres and features beautifully lit evening displays, musical fountain shows, and detailed depictions of Krishna's pastimes. The temple's mesmerizing beauty attracts thousands of visitors daily.",
       image: "https://images.unsplash.com/photo-1620288627223-53302f4e8c74?auto=format&fit=crop&q=80",
     },
     {
       name: "ISKCON Temple",
-      description: "A beautiful modern temple complex dedicated to Radha-Krishna, with magnificent architecture and regular kirtans (devotional singing). Founded by A.C. Bhaktivedanta Swami Prabhupada, it's part of the worldwide ISKCON movement that promotes Krishna consciousness.",
+      description: "A beautiful modern temple complex dedicated to Radha-Krishna, with magnificent architecture and regular kirtans (devotional singing). Established in 1975 by A.C. Bhaktivedanta Swami Prabhupada, the founder of ISKCON, it's officially known as Sri Sri Krishna Balaram Mandir. The temple serves as a major center for Gaudiya Vaishnavism and attracts thousands of devotees from around the world, especially during festivals like Janmashtami.",
       image: "https://images.unsplash.com/photo-1631273383020-cf75fb5d29e8?auto=format&fit=crop&q=80",
     },
     {
@@ -67,23 +67,23 @@ export const mathuraVrindavanData: DestinationDetails = {
       image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
     },
     {
-      name: "Potara Kund",
-      description: "A sacred water tank believed to be the place where baby Krishna's clothes (potara) were washed. It is one of the four holy kunds in Mathura and is surrounded by ancient red sandstone steps. Pilgrims visit to take a holy dip, believing it to be spiritually purifying.",
+      name: "Keshi Ghat",
+      description: "A sacred ghat on the banks of the Yamuna River, associated with Lord Krishna's defeat of the demon Keshi, sent by Kansa. The ghat features beautiful sandstone architecture and offers a serene, spiritual atmosphere. It is a popular site for ritual baths, evening aarti, and boat rides on the Yamuna, and is one of the few remaining original ghats of Vrindavan.",
       image: "https://images.unsplash.com/photo-1638186824004-94ebc48befe1?auto=format&fit=crop&q=80",
     },
     {
       name: "Govardhan Hill",
-      description: "A sacred hill near Vrindavan that Krishna is said to have lifted to protect the villagers from torrential rains sent by Lord Indra. Pilgrims perform parikrama (circumambulation) around the hill as a spiritual practice.",
+      description: "A sacred hill near Vrindavan that Krishna is said to have lifted to protect the villagers from torrential rains sent by Lord Indra. Pilgrims perform parikrama (circumambulation) around the 21 km hill as a spiritual practice. The area features holy sites like Mansi Ganga, Kusum Sarovar, and Radha Kund, making it a major pilgrimage destination for Krishna devotees.",
       image: "https://images.unsplash.com/photo-1629452055041-6df9caf27813?auto=format&fit=crop&q=80",
     },
     {
-      name: "Rajendra Swaroop Park",
-      description: "A public park known for its greenery, walking paths, and peaceful atmosphere. It serves as a recreational spot for locals and visitors, offering space for morning walks, jogging, and relaxation. It provides a refreshing break from the city's bustling religious sites.",
+      name: "Radha Kund and Shyam Kund",
+      description: "Two adjacent sacred ponds associated with Radha and Krishna's divine love. According to legend, Radha Kund was created by Radha herself, while Shyam Kund was formed by Krishna after he defeated the demon Aristasura. These kunds are considered the holiest bathing places for Krishna devotees, especially during Kartik Purnima when thousands of pilgrims take ritual dips seeking spiritual purification.",
       image: "https://images.unsplash.com/photo-1536294746696-9beec4d5eaa3?auto=format&fit=crop&q=80",
     },
     {
-      name: "Chamunda Devi Temple",
-      description: "A revered Hindu temple dedicated to Goddess Chamunda, a fierce form of Goddess Durga. According to legend, the temple was visited by Lord Krishna, who worshipped the goddess here. Devotees come to seek blessings for protection and strength, especially during Navratri.",
+      name: "Shahji Temple",
+      description: "A unique temple dedicated to Lord Krishna, known for its magnificent marble architecture and twisted spiral columns. Built in 1876 by a wealthy merchant Shah Kundan Lal, the temple features the deity Chhote Radha Raman. Its Basanti Kamra (Golden Room), adorned with Belgian glass chandeliers and intricate artwork, is a major attraction.",
       image: "https://images.unsplash.com/photo-1591777433109-8442b7855016?auto=format&fit=crop&q=80",
     },
   ],

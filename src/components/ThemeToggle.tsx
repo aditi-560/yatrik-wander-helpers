@@ -12,7 +12,12 @@ export const ThemeToggle: React.FC = () => {
       variant="outline" 
       size="icon" 
       onClick={toggleTheme}
-      className="rounded-full w-9 h-9 transition-all duration-300 dark:bg-gray-800 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700"
+      className="rounded-full w-9 h-9 transition-all duration-300 
+        bg-white dark:bg-gray-800 
+        text-yatrik-dark dark:text-white 
+        border-gray-200 dark:border-gray-700 
+        hover:bg-gray-100 dark:hover:bg-gray-700
+        shadow-sm"
       aria-label="Toggle theme"
     >
       {theme === 'light' ? (
