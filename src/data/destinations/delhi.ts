@@ -34,17 +34,17 @@ export const delhiData: DestinationDetails = {
     {
       name: "Red Fort",
       description: "This historic fort built by Shah Jahan in the 17th century served as the main residence of the Mughal Emperors for nearly 200 years.",
-      image: "https://images.unsplash.com/photo-1590466350190-a400c7877eb2?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/14094276/pexels-photo-14094276.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       name: "Qutub Minar",
       description: "A UNESCO World Heritage Site, this 73-meter tall minaret was built in 1193 and is a stunning example of Indo-Islamic architecture.",
-      image: "https://images.unsplash.com/photo-1586183189334-1abd18bf5ace?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/768043/pexels-photo-768043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       name: "Humayun's Tomb",
       description: "Built in 1570, this magnificent garden tomb is the first substantial example of Mughal architecture in India.",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/3858790/pexels-photo-3858790.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ],
   festivals: [

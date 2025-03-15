@@ -6,7 +6,7 @@ export const jaipurData: DestinationDetails = {
   name: "Jaipur",
   nickname: "The Pink City",
   description: "Jaipur, the capital of Rajasthan, is known as the 'Pink City' due to the distinctive terracotta pink color of its buildings. Founded in 1727 by Maharaja Sawai Jai Singh II, the city is a vibrant blend of royal heritage and modern urban planning. With its magnificent palaces, colorful bazaars, and rich cultural traditions, Jaipur forms an essential part of India's famous Golden Triangle tourist circuit.",
-  headerImage: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
+  headerImage: "https://images.pexels.com/photos/29002477/pexels-photo-29002477/free-photo-of-hawa-mahal-palace-of-winds-in-jaipur-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   history: "Jaipur was founded in 1727 by Maharaja Sawai Jai Singh II, who was the ruler of Amber. The city was planned according to the principles of Vastu Shastra and Shilpa Shastra, ancient Indian architectural texts. In 1876, the city was painted pink to welcome Prince Albert, and the tradition has been maintained since then.",
   bestTimeToVisit: "October to March when the weather is pleasant with temperatures ranging from 8°C to 32°C. Avoid summers (April to June) as temperatures can soar above 45°C.",
   howToReach: {
@@ -34,17 +34,17 @@ export const jaipurData: DestinationDetails = {
     {
       name: "Hawa Mahal",
       description: "The iconic 'Palace of Winds' with its unique honeycomb facade of 953 small windows was designed to allow royal ladies to observe street festivities without being seen.",
-      image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/28426013/pexels-photo-28426013/free-photo-of-hawa-mahal-s-intricate-facade-jaipur.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       name: "Amber Fort",
       description: "This magnificent fort-palace complex built from pale yellow and pink sandstone and white marble features stunning artistic elements and offers breathtaking views.",
-      image: "https://images.unsplash.com/photo-1587295656906-b5b49f77221f?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/9179927/pexels-photo-9179927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
     {
       name: "City Palace",
       description: "The royal residence features a series of courtyards, gardens, and buildings showcasing a fusion of Rajasthani and Mughal architectural styles.",
-      image: "https://images.unsplash.com/photo-1573979429815-f938a8259de1?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/19149605/pexels-photo-19149605/free-photo-of-blue-mosaics-in-the-city-palace-in-jaipur-in-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ],
   festivals: [

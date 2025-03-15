@@ -16,7 +16,7 @@ const features = [
     bgColor: "bg-gradient-to-br from-yatrik-purple/10 to-yatrik-purple/5"
   },
   {
-    title: "Engaging Audio Guides",
+    title: "Engaging Audio Guides", 
     description: "Insightful audio guides that narrate the history and culture of your destination.",
     icon: <Headphones className="h-10 w-10 text-white p-2 bg-yatrik-blue rounded-xl" />,
     bgColor: "bg-gradient-to-br from-yatrik-blue/10 to-yatrik-blue/5"
@@ -43,13 +43,14 @@ const features = [
 
 const Features = () => {
   return (
-    <section id="features" className="py-16 md:py-24 bg-white">
+    <section id="features" className="py-16 md:py-24 bg-white dark:bg-yatrik-darkBg text-yatrik-darkText dark:text-white">
+
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-gradient-to-r from-yatrik-yellow/20 to-yatrik-purple/20 px-4 py-1.5 rounded-full mb-4">
             <p className="text-sm font-medium text-yatrik-dark">Key Features</p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-yatrik-dark mb-4">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
             Explore India with powerful travel tools
           </h2>
           <p className="text-lg text-slate-600">
