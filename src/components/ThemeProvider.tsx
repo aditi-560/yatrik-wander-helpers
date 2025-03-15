@@ -11,7 +11,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<Theme>('light'); // Default value will be updated in useEffect
+  const [theme, setTheme] = useState<Theme>('light');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -40,11 +40,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
-  // Prevent flash of wrong theme by rendering null until mounted
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Provide theme context regardless of mounted state
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
