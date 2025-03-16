@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
@@ -20,14 +20,80 @@ const testimonials = [
     location: "Trekked Nepal",
     comment: "The offline maps and AR navigation were crucial during my Himalayan trek. Even in areas with no signal, Yatrik kept me on the right path with accurate altitude data and points of interest.",
     avatar: "PP"
+  },
+  {
+    name: "John Davis",
+    location: "Traveled South America",
+    comment: "The cultural insights and local tips in Yatrik helped me connect with communities across Peru and Colombia. I felt like I had insider knowledge everywhere I went.",
+    avatar: "JD"
+  },
+  {
+    name: "Emma Thompson",
+    location: "Toured Italy",
+    comment: "Yatrik's food recommendations were spot on! I found authentic family restaurants that weren't in any guidebooks. The photo translation feature also helped me navigate Italian menus easily.",
+    avatar: "ET"
+  },
+  {
+    name: "Rahul Mehta",
+    location: "Explored India",
+    comment: "Being able to navigate the historic streets of Varanasi and Jaipur with Yatrik's detailed maps made my spiritual journey so much more meaningful. The offline temple guides were incredibly detailed.",
+    avatar: "RM"
   }
 ];
 
 const Testimonials = () => {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+    
+    let scrollAmount = 0;
+    const cardWidth = 320 + 32; // Card width + gap
+    const totalWidth = testimonials.length * cardWidth;
+    
+    const scroll = () => {
+      if (!scrollContainer) return;
+      
+      scrollAmount += 1;
+      
+      // Reset when we've scrolled through all testimonials
+      if (scrollAmount >= totalWidth) {
+        scrollAmount = 0;
+        scrollContainer.scrollLeft = 0;
+      } else {
+        scrollContainer.scrollLeft = scrollAmount;
+      }
+    };
+    
+    // Scroll every 30ms for smooth animation
+    const timer = setInterval(scroll, 30);
+    
+    // Pause scrolling when hovering
+    scrollContainer.addEventListener('mouseenter', () => {
+      clearInterval(timer);
+    });
+    
+    const resumeScroll = () => {
+      clearInterval(timer);
+      setInterval(scroll, 30);
+    };
+    
+    scrollContainer.addEventListener('mouseleave', resumeScroll);
+    
+    return () => {
+      clearInterval(timer);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('mouseenter', () => clearInterval(timer));
+        scrollContainer.removeEventListener('mouseleave', resumeScroll);
+      }
+    };
+  }, []);
+
   return (
-    <section id="testimonials" className="py-16 md:py-24 bg-white dark:bg-yatrik-darkBg theme-transition">
+    <section id="testimonials" className="py-16 md:py-24 bg-white dark:bg-yatrik-darkBg theme-transition overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <div className="inline-block bg-yatrik-tertiary/30 dark:bg-yatrik-tertiary/20 px-4 py-1.5 rounded-full mb-4">
             <p className="text-sm font-medium text-yatrik-primary dark:text-yatrik-tertiary">Traveler stories</p>
           </div>
@@ -39,14 +105,19 @@ const Testimonials = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div 
+          ref={scrollRef} 
+          className="flex overflow-x-auto gap-8 pb-8 scrollbar-none snap-x snap-mandatory"
+          style={{ scrollBehavior: 'smooth' }}
+        >
+          {testimonials.concat(testimonials.slice(0, 3)).map((testimonial, index) => (
             <div 
               key={index} 
-              className="bg-yatrik-light dark:bg-yatrik-darkCard border border-slate-100 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
+              className="flex-shrink-0 w-80 snap-center bg-yatrik-light dark:bg-yatrik-darkCard border border-slate-100 dark:border-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow"
             >
               <div className="flex items-start mb-4">
                 <Avatar className="h-12 w-12 mr-4 border-2 border-yatrik-primary">
+                  <AvatarImage src={`https://api.dicebear.com/7.x/initials/svg?seed=${testimonial.name}`} alt={testimonial.name} />
                   <AvatarFallback className="bg-yatrik-primary text-white">{testimonial.avatar}</AvatarFallback>
                 </Avatar>
                 <div>
@@ -64,6 +135,13 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        {/* Scrolling indicators */}
+        <div className="flex justify-center gap-2 mt-6">
+          <div className="w-12 h-1 bg-yatrik-primary/40 rounded-full"></div>
+          <div className="w-3 h-1 bg-yatrik-primary/20 rounded-full"></div>
+          <div className="w-3 h-1 bg-yatrik-primary/20 rounded-full"></div>
         </div>
       </div>
     </section>

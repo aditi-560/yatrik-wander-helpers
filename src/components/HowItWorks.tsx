@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Map, Compass, Headphones, MapPin, Apple, Smartphone, Download } from 'lucide-react';
+import { Download, Compass, Headphones, MapPin, Apple, Smartphone } from 'lucide-react';
 
 const steps = [
   {
@@ -45,22 +45,22 @@ const HowItWorks = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
-          {/* Connect the dots between steps */}
-          <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-yatrik-yellow via-yatrik-purple to-yatrik-green hidden lg:block"></div>
+        <div className="max-w-3xl mx-auto space-y-12 relative">
+          {/* Vertical connecting line */}
+          <div className="absolute left-[28px] top-0 bottom-0 w-1 bg-gradient-to-b from-yatrik-yellow via-yatrik-purple to-yatrik-green"></div>
           
           {steps.map((step, index) => (
-            <div key={index} className={`bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 z-10 border border-transparent hover:border-yatrik-yellow/30 dark:hover:border-yatrik-primary/30`}>
-              <div className={`flex justify-center mb-6`}>
-                <div className={`bg-gradient-to-r ${step.color} rounded-full p-5 shadow-lg`}>
+            <div key={index} className="flex gap-6 relative z-10">
+              <div className={`flex-shrink-0 mt-2`}>
+                <div className={`bg-gradient-to-r ${step.color} rounded-full p-4 shadow-lg flex items-center justify-center w-14 h-14`}>
                   {step.icon}
-                </div>
-                <div className="absolute mt-16 text-2xl font-bold text-yatrik-yellow dark:text-yatrik-yellow">
-                  {index + 1}
+                  <span className="absolute text-xl font-bold text-white">{index + 1}</span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-yatrik-dark dark:text-white mb-3 text-center">{step.title}</h3>
-              <p className="text-slate-600 dark:text-gray-300 text-center">{step.description}</p>
+              <div className={`bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 flex-1 border border-transparent hover:border-yatrik-yellow/30 dark:hover:border-yatrik-primary/30`}>
+                <h3 className="text-xl font-semibold text-yatrik-dark dark:text-white mb-3">{step.title}</h3>
+                <p className="text-slate-600 dark:text-gray-300">{step.description}</p>
+              </div>
             </div>
           ))}
         </div>

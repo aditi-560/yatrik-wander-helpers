@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -92,14 +91,23 @@
   }
 }
 
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .theme-transition {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Enhancement for mobile apps */
 @supports (-webkit-touch-callout: none) {
   .ios-specific {
-    /* iOS-specific styles */
     padding-bottom: env(safe-area-inset-bottom);
     padding-top: env(safe-area-inset-top);
   }
@@ -121,7 +129,6 @@
   animation: fade-in 0.5s ease-out forwards;
 }
 
-/* Floating animation */
 @keyframes float {
   0% {
     transform: translateY(0px);
@@ -138,7 +145,6 @@
   animation: float 4s ease-in-out infinite;
 }
 
-/* Simplified HowItWorks section styles */
 .step-card {
   @apply bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-md hover:shadow-lg transition-all;
   @apply border-t-4 border-yatrik-primary dark:border-yatrik-primary/70;
@@ -148,7 +154,6 @@
   @apply bg-yatrik-primary/10 dark:bg-yatrik-primary/20 p-3 rounded-full mb-4 inline-flex;
 }
 
-/* Mobile app download buttons */
 .app-download-btn {
   @apply flex items-center gap-2 rounded-lg py-3 px-6 text-center font-medium transition-all;
   @apply shadow-md hover:shadow-lg;
