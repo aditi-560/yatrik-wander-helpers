@@ -27,7 +27,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
         <p className="text-sm font-medium text-yatrik-dark">Travel without limits</p>
       </div>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-yatrik-dark dark:text-white leading-tight">
-        Explore India on your own terms with <span className="text-yatrik-yellow">Yatrik</span>
+        Explore India on your own terms with <span className="bg-gradient-to-r from-yatrik-yellow to-yatrik-orange bg-clip-text text-transparent">Yatrik</span>
       </h1>
       <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto md:mx-0">
         Your personal travel companion that helps you navigate unfamiliar destinations in India with confidence. No guides, no restrictions—just you and your adventure.
@@ -61,7 +61,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
         </Button>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
-            className="bg-gradient-to-r from-yatrik-yellow to-yatrik-orange hover:bg-yatrik-orange/90 text-yatrik-dark border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:shadow-yatrik-yellow/40 hover:shadow-md dark:text-yatrik-dark dark:border-0 dark:hover:bg-yatrik-yellow/80"
+            className="bg-gradient-to-r from-yatrik-green to-yatrik-blue text-white border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yatrik-blue/40 hover:shadow-md"
           >
             Explore {destinations[currentDestIndex].name}
           </Button>

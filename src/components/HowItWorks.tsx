@@ -52,12 +52,17 @@ const HowItWorks = () => {
           {steps.map((step, index) => (
             <div key={index} className="flex gap-6 relative z-10">
               <div className={`flex-shrink-0 mt-2`}>
-                <div className={`bg-gradient-to-r ${step.color} rounded-full p-4 shadow-lg flex items-center justify-center w-14 h-14`}>
+                <div 
+                  className={`bg-gradient-to-r ${step.color} rounded-full p-4 shadow-lg flex items-center justify-center w-14 h-14 transition-all duration-300 hover:scale-110 animate-float`} 
+                  style={{ animationDelay: `${index * 0.2}s` }}
+                >
                   {step.icon}
-                  <span className="absolute text-xl font-bold text-white">{index + 1}</span>
                 </div>
               </div>
-              <div className={`bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 flex-1 border border-transparent hover:border-yatrik-yellow/30 dark:hover:border-yatrik-primary/30`}>
+              <div 
+                className={`bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-lg transition-all duration-500 hover:-translate-y-2 flex-1 border border-transparent hover:border-yatrik-yellow/30 dark:hover:border-yatrik-primary/30 animate-fade-in`}
+                style={{ animationDelay: `${index * 0.3}s` }}
+              >
                 <h3 className="text-xl font-semibold text-yatrik-dark dark:text-white mb-3">{step.title}</h3>
                 <p className="text-slate-600 dark:text-gray-300">{step.description}</p>
               </div>
@@ -68,7 +73,7 @@ const HowItWorks = () => {
         <div className="mt-16 text-center">
           <p className="text-lg text-yatrik-dark dark:text-white mb-6">Get started with Yatrik today</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg">
+            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
               <Apple className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>
@@ -76,7 +81,7 @@ const HowItWorks = () => {
               </div>
             </a>
             
-            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
               <Smartphone className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Get it on</div>
