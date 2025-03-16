@@ -39,12 +39,12 @@ export const agraData: DestinationDetails = {
     {
       name: "Agra Fort",
       description: "This UNESCO World Heritage site is a massive red sandstone fort complex that housed the Mughal emperors until they shifted their capital to Delhi.",
-      image: "https://images.unsplash.com/photo-1592639296346-560c37a0f711?auto=format&fit=crop&q=80",
+      image: "https://asi.nic.in/images/agrafort1.jpg",
     },
     {
       name: "Fatehpur Sikri",
       description: "A fortified ancient city that served as the capital of the Mughal Empire for a short period, featuring stunning red sandstone buildings.",
-      image: "https://images.unsplash.com/photo-1595074474743-751682fd33a9?auto=format&fit=crop&q=80",
+      image: "https://images.pexels.com/photos/6244983/pexels-photo-6244983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   ],
   festivals: [

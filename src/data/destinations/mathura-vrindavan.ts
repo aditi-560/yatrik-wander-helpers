@@ -6,7 +6,7 @@ export const mathuraVrindavanData: DestinationDetails = {
   name: "Mathura & Vrindavan",
   nickname: "Land of Krishna",
   description: "Mathura and Vrindavan, located in Uttar Pradesh, are twin sacred cities intimately connected to Lord Krishna. Mathura is revered as the birthplace of Krishna, while Vrindavan is where he spent his childhood. These ancient cities are dotted with hundreds of temples and sacred sites that attract millions of devotees and spiritual seekers annually. The air is filled with spiritual energy, devotional music, and the constant chanting of 'Radhe Radhe' and 'Hare Krishna'.",
-  headerImage: "https://images.unsplash.com/photo-1625658374343-10a664d9b68b?auto=format&fit=crop&q=80",
+  headerImage: "https://upload.wikimedia.org/wikipedia/commons/8/8e/PremMandirSideViewFromCanteen.jpg",
   history: "Mathura has a history dating back to at least 600 BCE and was an important city during the Mauryan and Kushan periods. According to Hindu mythology, it is the birthplace of Lord Krishna. Vrindavan is associated with Krishna's childhood and youth, where he spent time with Radha and the gopis. The town was rediscovered in the 16th century by Chaitanya Mahaprabhu.",
   bestTimeToVisit: "October to March for pleasant weather. Festive periods like Holi (February-March) and Janmashtami (August) are particularly vibrant but extremely crowded.",
   howToReach: {
@@ -34,57 +34,57 @@ export const mathuraVrindavanData: DestinationDetails = {
     {
       name: "Shri Krishna Janmabhoomi Temple",
       description: "The birthplace of Lord Krishna, this ancient temple is one of the most important pilgrimage sites for Krishna devotees. The temple complex includes the Garbh Griha (sanctum sanctorum), where Krishna is said to have been born, along with other shrines and a vibrant spiritual atmosphere. It attracts millions of devotees, especially during Janmashtami.",
-      image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616?auto=format&fit=crop&q=80",
+      image: "https://cdn1.prayagsamagam.com/media/2023/06/01153035/Krishna-Janambhoomi-Temple-2.webp",
     },
     {
       name: "Banke Bihari Temple",
       description: "One of Vrindavan's most revered temples, known for its enchanting black marble idol of Krishna in his 'tribhanga' pose. Built in 1864 by Swami Haridas, the temple follows the Rajasthani architectural style. The temple is famous for its unique darshan style where the deity is hidden and revealed by a curtain every few minutes, creating an atmosphere of divine anticipation. This practice is believed to protect devotees from being overwhelmed by the deity's beauty. The temple becomes especially vibrant during Janmashtami, Holi, and Jhulan Yatra festivals, when thousands of devotees gather to celebrate.",
-      image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185?auto=format&fit=crop&q=80",
+      image: "https://shrimathuraji.com/wp-content/uploads/2024/05/shri-banke-bihari-ji-vrindavan-2.jpg",
     },
     {
       name: "Dwarkadheesh Temple",
       description: "Built in 1814 by Seth Gokul Das Parikh, this temple is dedicated to Lord Krishna as the King of Dwarka. Known for its intricate Rajasthani-style architecture, beautiful carvings, and vibrant black-and-white marble courtyard. Located near Vishram Ghat, it's a major spiritual landmark in Mathura.",
-      image: "https://images.unsplash.com/photo-1627301517082-fce5e7a92d6d?auto=format&fit=crop&q=80",
+      image: "https://as2.ftcdn.net/v2/jpg/01/92/43/19/1000_F_192431988_CSRkrIrUNWVqXHtoe3WRW2HjoXRImnbp.jpg",
     },
     {
       name: "Vishram Ghat",
       description: "The most sacred ghat on the Yamuna River where Lord Krishna rested after defeating the tyrant king Kansa. This major pilgrimage site is surrounded by beautiful temples and ancient structures. It's the starting point for the parikrama (circumambulation) of Mathura and hosts spectacular evening aarti ceremonies.",
-      image: "https://images.unsplash.com/photo-1555791019-72d3af01da82?auto=format&fit=crop&q=80",
+      image: "https://s7ap1.scene7.com/is/image/incredibleindia/vishram-ghat-mathura-uttar-pradesh-3-attr-hero?qlt=82&ts=1726649181536",
     },
     {
       name: "Prem Mandir",
       description: "A magnificent white marble temple dedicated to Radha-Krishna and Sita-Ram, showcasing stunning architecture and intricate carvings. Built by Jagadguru Kripalu Maharaj and inaugurated in 2012, it spans 54 acres and features beautifully lit evening displays, musical fountain shows, and detailed depictions of Krishna's pastimes. The temple's mesmerizing beauty attracts thousands of visitors daily.",
-      image: "https://images.unsplash.com/photo-1620288627223-53302f4e8c74?auto=format&fit=crop&q=80",
+      image: "https://i.pinimg.com/736x/13/13/fe/1313fe56a8f31fe5d003e9ecb62aab04.jpg",
     },
     {
       name: "ISKCON Temple",
       description: "A beautiful modern temple complex dedicated to Radha-Krishna, with magnificent architecture and regular kirtans (devotional singing). Established in 1975 by A.C. Bhaktivedanta Swami Prabhupada, the founder of ISKCON, it's officially known as Sri Sri Krishna Balaram Mandir. The temple serves as a major center for Gaudiya Vaishnavism and attracts thousands of devotees from around the world, especially during festivals like Janmashtami.",
-      image: "https://images.unsplash.com/photo-1631273383020-cf75fb5d29e8?auto=format&fit=crop&q=80",
+      image: "https://luxevista.in/wp-content/uploads/2024/01/Sri-Sri-Krishna-Balaram-Mandir-ISKCON-Vrindavan.png",
     },
     {
       name: "Chaurasi Khamba Temple",
       description: "An ancient temple known for its 84 intricately carved pillars (Chaurasi Khamba means '84 pillars'). Dedicated to Lord Krishna, it reflects a blend of historic and architectural significance. The temple is believed to be associated with the Pandavas from the Mahabharata era.",
-      image: "https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&q=80",
+      image: "https://www.hlimg.com/images/things2do/738X538/jjjjj_1523689638t.jpg",
     },
     {
       name: "Keshi Ghat",
       description: "A sacred ghat on the banks of the Yamuna River, associated with Lord Krishna's defeat of the demon Keshi, sent by Kansa. The ghat features beautiful sandstone architecture and offers a serene, spiritual atmosphere. It is a popular site for ritual baths, evening aarti, and boat rides on the Yamuna, and is one of the few remaining original ghats of Vrindavan.",
-      image: "https://images.unsplash.com/photo-1638186824004-94ebc48befe1?auto=format&fit=crop&q=80",
+      image: "https://images.squarespace-cdn.com/content/v1/5c0863a64eddece39c9127f6/1548033812909-ZVWJ4K0PBLPP4K9XQ52J/IMG_6801.JPG?format=1500w",
     },
     {
       name: "Govardhan Hill",
       description: "A sacred hill near Vrindavan that Krishna is said to have lifted to protect the villagers from torrential rains sent by Lord Indra. Pilgrims perform parikrama (circumambulation) around the 21 km hill as a spiritual practice. The area features holy sites like Mansi Ganga, Kusum Sarovar, and Radha Kund, making it a major pilgrimage destination for Krishna devotees.",
-      image: "https://images.unsplash.com/photo-1629452055041-6df9caf27813?auto=format&fit=crop&q=80",
+      image: "https://www.holidify.com/images/cmsuploads/compressed/5395_20190319183709.jpg",
     },
     {
       name: "Radha Kund and Shyam Kund",
       description: "Two adjacent sacred ponds associated with Radha and Krishna's divine love. According to legend, Radha Kund was created by Radha herself, while Shyam Kund was formed by Krishna after he defeated the demon Aristasura. These kunds are considered the holiest bathing places for Krishna devotees, especially during Kartik Purnima when thousands of pilgrims take ritual dips seeking spiritual purification.",
-      image: "https://images.unsplash.com/photo-1536294746696-9beec4d5eaa3?auto=format&fit=crop&q=80",
+      image: "https://upload.wikimedia.org/wikipedia/commons/2/29/Radha_Kund_3.jpg",
     },
     {
       name: "Shahji Temple",
       description: "A unique temple dedicated to Lord Krishna, known for its magnificent marble architecture and twisted spiral columns. Built in 1876 by a wealthy merchant Shah Kundan Lal, the temple features the deity Chhote Radha Raman. Its Basanti Kamra (Golden Room), adorned with Belgian glass chandeliers and intricate artwork, is a major attraction.",
-      image: "https://images.unsplash.com/photo-1591777433109-8442b7855016?auto=format&fit=crop&q=80",
+      image: "https://mathuravrindavantourism.co.in/images/places-to-visit/headers/shahji-temple-mathura-indian-tourism-entry-fee-timings-holidays-reviews-header.jpg",
     },
   ],
   festivals: [

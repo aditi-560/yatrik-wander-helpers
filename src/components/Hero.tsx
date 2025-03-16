@@ -9,7 +9,7 @@ const destinations = [
   { 
     name: "Jaipur", 
     nickname: "Pink City",
-    image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&q=80",
+    image: "https://images.pexels.com/photos/12931430/pexels-photo-12931430.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     color: "bg-yatrik-yellow/20",
     id: "jaipur"
   },
@@ -23,14 +23,14 @@ const destinations = [
   { 
     name: "Mathura", 
     nickname: "Birthplace of Krishna",
-    image: "https://images.unsplash.com/photo-1625658374344-c92f57cc8616?auto=format&fit=crop&q=80",
+    image: "https://upload.wikimedia.org/wikipedia/commons/c/cc/Vishram_Ghat.jpg",
     color: "bg-yatrik-green/20",
     id: "mathura-vrindavan"
   },
   { 
     name: "Vrindavan", 
     nickname: "Land of Krishna",
-    image: "https://images.unsplash.com/photo-1604567394466-c9b0dd086185?auto=format&fit=crop&q=80",
+    image: "https://images.pexels.com/photos/11969919/pexels-photo-11969919.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     color: "bg-yatrik-primary/20",
     id: "mathura-vrindavan"
   },
@@ -64,7 +64,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-r from-yatrik-yellow/20 via-yatrik-primary/10 to-yatrik-blue/10">
+    <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-r from-yatrik-yellow/50 via-yatrik-primary/30 to-yatrik-blue/20">
+
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Text content */}
