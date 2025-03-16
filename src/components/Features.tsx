@@ -6,54 +6,53 @@ const features = [
   {
     title: "Personalized Experience",
     description: "Customized travel recommendations based on your preferences and interests.",
-    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-yatrik-yellow rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-yellow/10 to-yatrik-yellow/5"
+    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-yellow to-yatrik-orange rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-yellow/10 to-yatrik-orange/5"
   },
   {
     title: "Seamless Navigation",
     description: "Step-by-step directions to your destination, including public transport options.",
-    icon: <Navigation className="h-10 w-10 text-white p-2 bg-yatrik-purple rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-purple/10 to-yatrik-purple/5"
+    icon: <Navigation className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-purple to-yatrik-blue rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-purple/10 to-yatrik-blue/5"
   },
   {
     title: "Engaging Audio Guides", 
     description: "Insightful audio guides that narrate the history and culture of your destination.",
-    icon: <Headphones className="h-10 w-10 text-white p-2 bg-yatrik-blue rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-blue/10 to-yatrik-blue/5"
+    icon: <Headphones className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-blue to-yatrik-green rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-blue/10 to-yatrik-green/5"
   },
   {
     title: "Offline Access",
     description: "Download maps and guides for offline access, so you can explore without an internet connection.",
-    icon: <Download className="h-10 w-10 text-white p-2 bg-yatrik-green rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-green/10 to-yatrik-green/5"
+    icon: <Download className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-green to-yatrik-yellow rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-green/10 to-yatrik-yellow/5"
   },
   {
     title: "Smart Suggestions",
     description: "Real-time recommendations on nearby attractions, restaurants, and events.",
-    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-yatrik-primary rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-primary/10 to-yatrik-primary/5"
+    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-primary to-yatrik-purple rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-primary/10 to-yatrik-purple/5"
   },
   {
     title: "Bluetooth Compatibility",
     description: "Connect Yatrik to your car's Bluetooth system or headphones for a hands-free, immersive experience.",
-    icon: <Bluetooth className="h-10 w-10 text-white p-2 bg-yatrik-secondary rounded-xl" />,
-    bgColor: "bg-gradient-to-br from-yatrik-secondary/10 to-yatrik-secondary/5"
+    icon: <Bluetooth className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-secondary to-yatrik-blue rounded-xl" />,
+    bgColor: "bg-gradient-to-br from-yatrik-secondary/10 to-yatrik-blue/5"
   }
 ];
 
 const Features = () => {
   return (
     <section id="features" className="py-16 md:py-24 bg-white dark:bg-yatrik-darkBg text-yatrik-darkText dark:text-white">
-
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-gradient-to-r from-yatrik-yellow/20 to-yatrik-purple/20 px-4 py-1.5 rounded-full mb-4">
-            <p className="text-sm font-medium text-yatrik-dark">Key Features</p>
+            <p className="text-sm font-medium text-yatrik-dark dark:text-white">Key Features</p>
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-4">
             Explore India with powerful travel tools
           </h2>
-          <p className="text-lg text-slate-600">
+          <p className="text-lg text-slate-600 dark:text-slate-300">
             Yatrik puts all the tools you need to explore India's rich cultural heritage right in your pocket, eliminating the need for expensive tour guides or bulky travel books.
           </p>
         </div>
@@ -62,13 +61,13 @@ const Features = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className={`border border-slate-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow ${feature.bgColor}`}
+              className={`border border-slate-100 dark:border-slate-700 rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 ${feature.bgColor}`}
             >
               <div className="mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-yatrik-dark mb-2">{feature.title}</h3>
-              <p className="text-slate-600">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-yatrik-dark dark:text-white mb-2">{feature.title}</h3>
+              <p className="text-slate-600 dark:text-slate-300">{feature.description}</p>
             </div>
           ))}
         </div>

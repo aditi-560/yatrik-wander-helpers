@@ -121,6 +121,23 @@
   animation: fade-in 0.5s ease-out forwards;
 }
 
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
 /* Simplified HowItWorks section styles */
 .step-card {
   @apply bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-md hover:shadow-lg transition-all;
