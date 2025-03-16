@@ -15,7 +15,7 @@ const HeroSection = () => {
             <p className="text-sm font-medium dark:text-white">Holy Places</p>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-yatrik-dark dark:text-white">
-            Explore the Divine Land of <span className="text-yatrik-orange">Mathura & Vrindavan</span>
+            Explore the Divine Land of <span className="text-yatrik-yellow text-5xl md:text-7xl">Mathura & Vrindavan</span>
           </h1>
           <p className="text-lg md:text-xl text-yatrik-dark/80 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Discover the sacred birthplace of Lord Krishna and experience the spiritual essence of these holy cities with Yatrik as your guide.
