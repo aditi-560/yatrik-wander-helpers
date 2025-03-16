@@ -24,7 +24,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-r from-pink-200 via-yellow-100 to-pink-100 dark:from-yatrik-purple/30 dark:via-yatrik-darkBg dark:to-yatrik-darkBg/90 theme-transition">
+    <section className="pt-20 pb-16 md:pt-28 md:pb-24 bg-gradient-to-r from-yatrik-yellow/40 via-yatrik-primary/30 to-yatrik-purple/20 dark:from-yatrik-purple/30 dark:via-yatrik-darkBg dark:to-yatrik-darkBg/90 theme-transition">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-center gap-12">
           {/* Text content */}

@@ -27,7 +27,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
         <p className="text-sm font-medium text-yatrik-dark">Travel without limits</p>
       </div>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-yatrik-dark dark:text-white leading-tight">
-        Explore India on your own terms with <span className="text-yatrik-yellow text-6xl md:text-7xl lg:text-8xl font-bold">Yatrik</span>
+        Explore India on your own terms with <span className="bg-gradient-to-r from-yatrik-yellow via-yatrik-orange to-yatrik-primary text-transparent bg-clip-text text-7xl md:text-8xl lg:text-9xl block mt-2">Yatrik</span>
       </h1>
       <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto md:mx-0">
         Your personal travel companion that helps you navigate unfamiliar destinations in India with confidence. No guides, no restrictions—just you and your adventure.
@@ -56,12 +56,12 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-        <Button className="bg-yatrik-purple hover:bg-yatrik-purple/90 text-white px-8 py-6 text-lg shadow-lg hover:shadow-yatrik-purple/50 hover:shadow-md transition-all duration-300">
+        <Button className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white px-8 py-6 text-lg shadow-lg hover:shadow-yatrik-purple/50 hover:shadow-md transition-all duration-300">
           Download Now
         </Button>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
-            className="bg-yatrik-green text-white border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yatrik-green/40 hover:shadow-md"
+            className="bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yatrik-yellow/40 hover:shadow-md"
           >
             Explore {destinations[currentDestIndex].name}
           </Button>
