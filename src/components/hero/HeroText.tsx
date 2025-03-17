@@ -24,8 +24,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
   return (
     <div className="flex-1 space-y-6 text-center md:text-left">
       <div className={`inline-block ${currentDestination.color} px-4 py-1.5 rounded-full transition-colors duration-500`}>
-      <p className="text-sm font-medium text-yatrik-dark dark:text-white">Travel without limits</p>
-
+        <p className="text-sm font-medium text-yatrik-dark dark:text-white">Travel without limits</p>
       </div>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-yatrik-dark dark:text-white leading-tight">
         Explore India on your own terms with <span className="bg-gradient-to-r from-yatrik-yellow via-yatrik-orange to-yatrik-primary text-transparent bg-clip-text text-7xl md:text-8xl lg:text-9xl block mt-2">Yatrik</span>
@@ -57,18 +56,16 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-        <Button 
-          className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px]"
-        >
-          Download Now
-        </Button>
+        <Link to="/download">
+          <Button 
+            className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px]"
+          >
+            Download Now
+          </Button>
+        </Link>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
-
-            className="bg-gradient-to-r from-yatrik-primary to-yatrik-purple text-white font-bold border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-green-400/40 hover:shadow-md"
-
             className="bg-gradient-to-r from-yatrik-yellow to-yatrik-primary text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-xl rounded-xl border-2 border-yatrik-orange/20 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-yatrik-orange/40"
-
           >
             Explore {destinations[currentDestIndex].name}
           </Button>

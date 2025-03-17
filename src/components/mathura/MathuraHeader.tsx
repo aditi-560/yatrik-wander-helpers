@@ -35,10 +35,12 @@ const MathuraHeader: React.FC = () => {
             </Button>
           </Link>
           <ThemeToggle />
-          <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
-            <Download className="h-4 w-4 mr-2" />
-            Download App
-          </Button>
+          <Link to="/download">
+            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
+              <Download className="h-4 w-4 mr-2" />
+              Download App
+            </Button>
+          </Link>
         </div>
         
         {/* Mobile menu button */}
@@ -97,10 +99,12 @@ const MathuraHeader: React.FC = () => {
             >
               Jaipur
             </Link>
-            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
-              <Download className="h-4 w-4 mr-2" />
-              Download App
-            </Button>
+            <Link to="/download" onClick={() => setIsMenuOpen(false)}>
+              <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
+                <Download className="h-4 w-4 mr-2" />
+                Download App
+              </Button>
+            </Link>
           </div>
         </div>
       )}
