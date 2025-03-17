@@ -9,6 +9,10 @@ import MathuraVrindavan from "./pages/MathuraVrindavan";
 import Destination from "./pages/Destination";
 import NotFound from "./pages/NotFound";
 import { ThemeProvider } from "./components/ThemeProvider";
+import Features from "./components/Features";
+import HowItWorks from './components/HowItWorks';
+import Testimonials from "./components/Testimonials";
+import CallToAction from "./components/CallToAction";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +25,10 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/download" element={<CallToAction />} />
             <Route path="/mathura-vrindavan" element={<MathuraVrindavan />} />
             <Route path="/destinations/:id" element={<Destination />} />
             <Route path="*" element={<NotFound />} />

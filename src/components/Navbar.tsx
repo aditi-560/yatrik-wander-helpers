@@ -4,8 +4,12 @@ import { Button } from "@/components/ui/button";
 import { MapPin, Menu, X, Download } from 'lucide-react';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
+
+import { Link } from 'react-router-dom';
+import HowItWorks from './HowItWorks';
 import { Link, useLocation } from 'react-router-dom';
 import { useIsMobile } from '@/hooks/use-mobile';
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,6 +29,49 @@ const Navbar = () => {
         
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
+
+        <Link 
+          to="/features" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Features
+        </Link>
+          {/* <a href="#features" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+            Features
+          </a> */}
+          <Link 
+          to="/how-it-works" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          How it works
+        </Link>
+
+        <Link 
+          to="/testimonials" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Testimonials
+        </Link>
+
+          {/* <a href="#how-it-works" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+            How It Works
+          </a> */}
+          {/* <a href="#testimonials" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+            Testimonials
+          </a> */}
+          <ThemeToggle />
+          <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
+          <Link 
+          to="/download" 
+          
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Download now
+        </Link>
+
           {isHomePage ? (
             // Home page navigation
             <>
@@ -59,6 +106,7 @@ const Navbar = () => {
           <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
             <Download className="h-4 w-4 mr-2" />
             Download App
+
           </Button>
         </div>
         
@@ -81,6 +129,29 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white dark:bg-yatrik-darkBg border-b border-slate-200 dark:border-gray-800 theme-transition">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+
+            <a 
+              href="#features" 
+              className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Features
+            </a>
+            <a 
+              href="" 
+              className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              How It Works
+            </a>
+            <a 
+              href="#testimonials" 
+              className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Testimonials
+            </a>
+
             {isHomePage ? (
               // Home page mobile navigation
               <>
@@ -139,6 +210,7 @@ const Navbar = () => {
                 </Link>
               </>
             )}
+
             <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
               <Download className="h-4 w-4 mr-2" />
               Download App
