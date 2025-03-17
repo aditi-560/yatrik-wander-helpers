@@ -57,12 +57,18 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-        <Button className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white px-8 py-6 text-lg shadow-lg hover:shadow-yatrik-purple/50 hover:shadow-md transition-all duration-300">
+        <Button 
+          className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px]"
+        >
           Download Now
         </Button>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
+
             className="bg-gradient-to-r from-yatrik-primary to-yatrik-purple text-white font-bold border-0 px-8 py-6 text-lg w-full shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-green-400/40 hover:shadow-md"
+
+            className="bg-gradient-to-r from-yatrik-yellow to-yatrik-primary text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-xl rounded-xl border-2 border-yatrik-orange/20 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-yatrik-orange/40"
+
           >
             Explore {destinations[currentDestIndex].name}
           </Button>
