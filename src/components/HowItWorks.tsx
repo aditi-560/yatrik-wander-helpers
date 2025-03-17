@@ -7,7 +7,7 @@ const steps = [
     icon: <Download className="h-8 w-8 text-white" />,
     title: "Download App",
     description: "Get the Yatrik app for iOS or Android to access offline maps and guides.",
-    color: "from-yatrik-yellow to-yatrik-orange"
+    color: "from-yatrik-yellow to-yatrik-yellow"
   },
   {
     icon: <Compass className="h-8 w-8 text-white" />,
@@ -73,7 +73,7 @@ const HowItWorks = () => {
         <div className="mt-16 text-center">
           <p className="text-lg text-yatrik-dark dark:text-white mb-6">Get started with Yatrik today</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-yellow text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
               <Apple className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>

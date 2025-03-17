@@ -62,9 +62,10 @@ const HeroAppPreview = ({
             </div>
           </div>
         </div>
-        <div className="absolute -top-4 -right-4 bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
-          NEW
-        </div>
+        <div className="absolute -top-4 -right-4 bg-yatrik-yellow text-black text-xs font-bold px-3 py-1 rounded-full shadow-xl animate-pulse">
+  NEW
+</div>
+
       </div>
       
       {/* Floating destinations */}
@@ -124,7 +125,7 @@ const FloatingDestinations = ({ destinations }) => (
       <Route className="h-5 w-5 text-white" />
       <span className="text-sm font-medium">{destinations[1].name}</span>
     </div>
-    <div className="absolute bottom-4 -left-4 bg-gradient-to-r from-yatrik-yellow to-yatrik-orange text-yatrik-dark p-3 rounded-xl shadow-lg hidden md:flex items-center space-x-2 animate-float" style={{ animationDelay: '1.5s' }}>
+    <div className="absolute bottom-4 -left-4 bg-gradient-to-r from-yatrik-yellow to-yatrik-yellow text-yatrik-dark p-3 rounded-xl shadow-lg hidden md:flex items-center space-x-2 animate-float" style={{ animationDelay: '1.5s' }}>
       <Globe className="h-5 w-5 text-yatrik-dark" />
       <span className="text-sm font-medium">{destinations[4].name}</span>
     </div>

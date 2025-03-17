@@ -5,6 +5,7 @@ import { MapPin, Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import ThemeToggle from './ThemeToggle';
 import { Link } from 'react-router-dom';
+import HowItWorks from './HowItWorks';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,18 +22,47 @@ const Navbar = () => {
         
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+        <Link 
+          to="/features" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Features
+        </Link>
+          {/* <a href="#features" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
             Features
-          </a>
-          <a href="#how-it-works" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+          </a> */}
+          <Link 
+          to="/how-it-works" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          How it works
+        </Link>
+
+        <Link 
+          to="/testimonials" 
+          className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Testimonials
+        </Link>
+
+          {/* <a href="#how-it-works" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
             How It Works
-          </a>
-          <a href="#testimonials" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
+          </a> */}
+          {/* <a href="#testimonials" className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors">
             Testimonials
-          </a>
+          </a> */}
           <ThemeToggle />
           <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
-            Download App
+          <Link 
+          to="/download" 
+          
+          onClick={() => setIsMenuOpen(false)}
+         >
+          Download now
+        </Link>
           </Button>
         </div>
         
@@ -63,7 +93,7 @@ const Navbar = () => {
               Features
             </a>
             <a 
-              href="#how-it-works" 
+              href="" 
               className="text-sm font-medium text-slate-700 dark:text-gray-300 hover:text-yatrik-yellow dark:hover:text-yatrik-yellow transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >

@@ -6,7 +6,7 @@ const features = [
   {
     title: "Personalized Experience",
     description: "Customized travel recommendations based on your preferences and interests.",
-    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-yellow to-yatrik-orange rounded-xl" />,
+    icon: <Lightbulb className="h-10 w-10 text-white p-2 bg-gradient-to-br from-yatrik-yellow to-yatrik-yellow rounded-xl" />,
     bgColor: "bg-gradient-to-br from-yatrik-yellow/10 to-yatrik-orange/5"
   },
   {

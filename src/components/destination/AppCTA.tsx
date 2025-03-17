@@ -22,7 +22,7 @@ const AppCTA: React.FC<AppCTAProps> = ({ destinationName }) => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="app-download-btn ios-btn">
+            <a href="https://apps.apple.com/in/app/yatrik/id6636484336" className="app-download-btn ios-btn">
               <Apple className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>
@@ -30,7 +30,7 @@ const AppCTA: React.FC<AppCTAProps> = ({ destinationName }) => {
               </div>
             </a>
             
-            <a href="#" className="app-download-btn android-btn dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+            <a href="https://play.google.com/store/apps/details?id=com.mytoursapp.android.app9539&pcampaignid=web_share&pli=1" className="app-download-btn android-btn dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
               <Smartphone className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Get it on</div>
