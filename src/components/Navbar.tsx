@@ -64,12 +64,12 @@ const Navbar = () => {
             </>
           )}
           <ThemeToggle />
-          <Link to="/download">
+          <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer">
             <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
               <Download className="h-4 w-4 mr-2" />
               Download App
             </Button>
-          </Link>
+          </a>
         </div>
         
         {/* Mobile menu button */}
@@ -149,12 +149,12 @@ const Navbar = () => {
                 </Link>
               </>
             )}
-            <Link to="/download" onClick={() => setIsMenuOpen(false)}>
+            <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
               <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
                 <Download className="h-4 w-4 mr-2" />
                 Download App
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       )}

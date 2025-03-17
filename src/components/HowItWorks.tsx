@@ -73,7 +73,7 @@ const HowItWorks = () => {
         <div className="mt-16 text-center">
           <p className="text-lg text-yatrik-dark dark:text-white mb-6">Get started with Yatrik today</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-yellow text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+            <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-yellow to-yatrik-yellow text-yatrik-dark font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
               <Apple className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>
@@ -81,7 +81,7 @@ const HowItWorks = () => {
               </div>
             </a>
             
-            <a href="#" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
+            <a href="https://play.google.com/store/apps/details?id=com.mytoursapp.android.app9539&pcampaignid=web_share&pli=1" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg py-3 px-6 bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-medium transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105">
               <Smartphone className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Get it on</div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { MapPin } from 'lucide-react';
+import { MapPin, Download, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 type Destination = {
@@ -56,18 +56,18 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
       </div>
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-        <Link to="/download">
+        <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer">
           <Button 
-            className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px]"
+            className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px] w-full"
           >
-            Download Now
+            <Download className="h-5 w-5 mr-2" /> Download Now
           </Button>
-        </Link>
+        </a>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
             className="bg-gradient-to-r from-yatrik-yellow to-yatrik-primary text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-xl rounded-xl border-2 border-yatrik-orange/20 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-yatrik-orange/40"
           >
-            Explore {destinations[currentDestIndex].name}
+            Explore {destinations[currentDestIndex].name} <ArrowRight className="h-5 w-5 ml-2" />
           </Button>
         </Link>
       </div>
