@@ -23,7 +23,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
   
   return (
     <div className="flex-1 space-y-6 text-center md:text-left">
-      <div className={`inline-block ${currentDestination.color} px-4 py-1.5 rounded-full transition-colors duration-500`}>
+      <div className={`inline-block ${currentDestination.color} px-4 py-1.5 rounded-md transition-colors duration-500`}>
         <p className="text-sm font-medium text-yatrik-dark dark:text-white">Travel without limits</p>
       </div>
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-yatrik-dark dark:text-white leading-tight">
@@ -40,7 +40,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
             key={index} 
             to={`/destinations/${destination.id}`}
             className={`${index === currentDestIndex ? 'bg-yatrik-yellow text-yatrik-dark' : 'bg-white/80 dark:bg-yatrik-darkCard/80'} 
-              backdrop-blur-sm rounded-full px-3 py-1 text-sm font-medium border border-yatrik-yellow/30 
+              backdrop-blur-sm rounded-md px-3 py-1 text-sm font-medium border border-yatrik-yellow/30 
               flex items-center gap-1 cursor-pointer transition-all duration-300 hover:shadow-md`}
             onClick={(e) => {
               e.preventDefault();
@@ -58,14 +58,14 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
       <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
         <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer">
           <Button 
-            className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-xl border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px] w-full"
+            className="bg-gradient-to-r from-yatrik-purple to-yatrik-blue text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-yatrik-purple/50 rounded-md border-2 border-white/20 transition-all duration-300 hover:translate-y-[-2px] w-full"
           >
             <Download className="h-5 w-5 mr-2" /> Download Now
           </Button>
         </a>
         <Link to={`/destinations/${destinations[currentDestIndex].id}`}>
           <Button 
-            className="bg-gradient-to-r from-yatrik-yellow to-yatrik-primary text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-xl rounded-xl border-2 border-yatrik-orange/20 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-yatrik-orange/40"
+            className="bg-gradient-to-r from-yatrik-yellow to-yatrik-primary text-yatrik-dark font-bold border-0 px-8 py-6 text-lg w-full shadow-xl rounded-md border-2 border-yatrik-orange/20 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-yatrik-orange/40"
           >
             Explore {destinations[currentDestIndex].name} <ArrowRight className="h-5 w-5 ml-2" />
           </Button>
@@ -80,7 +80,7 @@ const HeroText = ({ destinations, currentDestIndex, setCurrentDestIndex }: HeroT
 
 const RatingBadges = () => (
   <div className="flex flex-wrap justify-center md:justify-start gap-4 pt-6">
-    <div className="flex items-center bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm">
+    <div className="flex items-center bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm rounded-md px-4 py-2 shadow-sm">
       <div className="flex text-yatrik-yellow">
         {[...Array(5)].map((_, i) => (
           <svg key={i} xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
@@ -90,7 +90,7 @@ const RatingBadges = () => (
       </div>
       <span className="ml-2 text-sm font-medium text-slate-700 dark:text-slate-200">4.9/5 • 10k+ ratings</span>
     </div>
-    <div className="bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm rounded-lg px-4 py-2 shadow-sm">
+    <div className="bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm rounded-md px-4 py-2 shadow-sm">
       <span className="text-sm font-medium text-slate-700 dark:text-slate-200">100k+ active explorers</span>
     </div>
   </div>

@@ -11,7 +11,7 @@ const AppCTA: React.FC<AppCTAProps> = ({ destinationName }) => {
   return (
     <section className="py-16 bg-gradient-to-br from-yatrik-tertiary/10 to-white dark:from-yatrik-darkBg dark:to-yatrik-darkBg theme-transition">
       <div className="container mx-auto px-4">
-        <div className="bg-white/90 dark:bg-yatrik-darkCard/90 backdrop-blur-sm rounded-2xl p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
+        <div className="bg-white/90 dark:bg-yatrik-darkCard/90 backdrop-blur-sm rounded-lg p-8 md:p-12 shadow-lg max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold mb-4 dark:text-white">
               Explore {destinationName} with the Yatrik App
@@ -22,7 +22,7 @@ const AppCTA: React.FC<AppCTAProps> = ({ destinationName }) => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" className="app-download-btn ios-btn">
+            <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" className="app-download-btn ios-btn rounded-md">
               <Apple className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Download on the</div>
@@ -30,7 +30,7 @@ const AppCTA: React.FC<AppCTAProps> = ({ destinationName }) => {
               </div>
             </a>
             
-            <a href="https://play.google.com/store/apps/details?id=com.mytoursapp.android.app9539&pcampaignid=web_share&pli=1" target="_blank" rel="noopener noreferrer" className="app-download-btn android-btn dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
+            <a href="https://play.google.com/store/apps/details?id=com.mytoursapp.android.app9539&pcampaignid=web_share&pli=1" target="_blank" rel="noopener noreferrer" className="app-download-btn android-btn dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700 rounded-md">
               <Smartphone className="h-5 w-5" />
               <div className="text-left">
                 <div className="text-xs">Get it on</div>

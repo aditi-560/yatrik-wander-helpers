@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -146,16 +147,16 @@
 }
 
 .step-card {
-  @apply bg-white dark:bg-yatrik-darkCard rounded-xl p-6 shadow-md hover:shadow-lg transition-all;
+  @apply bg-white dark:bg-yatrik-darkCard rounded-md p-6 shadow-md hover:shadow-lg transition-all;
   @apply border-t-4 border-yatrik-primary dark:border-yatrik-primary/70;
 }
 
 .step-icon-container {
-  @apply bg-yatrik-primary/10 dark:bg-yatrik-primary/20 p-3 rounded-full mb-4 inline-flex;
+  @apply bg-yatrik-primary/10 dark:bg-yatrik-primary/20 p-3 rounded-md mb-4 inline-flex;
 }
 
 .app-download-btn {
-  @apply flex items-center gap-2 rounded-lg py-3 px-6 text-center font-medium transition-all;
+  @apply flex items-center gap-2 rounded-md py-3 px-6 text-center font-medium transition-all;
   @apply shadow-md hover:shadow-lg;
 }
 

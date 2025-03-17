@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1600095326825-220dda1575f4')] bg-cover bg-center"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center justify-center space-x-2 bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm px-4 py-1.5 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center space-x-2 bg-white/80 dark:bg-yatrik-darkCard/80 backdrop-blur-sm px-4 py-1.5 rounded-md mb-6">
             <MapPin className="h-4 w-4 text-yatrik-primary" />
             <p className="text-sm font-medium dark:text-white">Holy Places</p>
           </div>
@@ -21,10 +21,10 @@ const HeroSection = () => {
             Discover the sacred birthplace of Lord Krishna and experience the spiritual essence of these holy cities with Yatrik as your guide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark px-8 py-6 text-lg">
+            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark px-8 py-6 text-lg rounded-md">
               Start Exploring
             </Button>
-            <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark dark:text-yatrik-yellow hover:bg-yatrik-yellow/10 px-8 py-6 text-lg">
+            <Button variant="outline" className="border-yatrik-yellow text-yatrik-dark dark:text-yatrik-yellow hover:bg-yatrik-yellow/10 px-8 py-6 text-lg rounded-md">
               View on Map
             </Button>
           </div>

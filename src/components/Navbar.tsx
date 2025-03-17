@@ -65,7 +65,7 @@ const Navbar = () => {
           )}
           <ThemeToggle />
           <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
+            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark rounded-md">
               <Download className="h-4 w-4 mr-2" />
               Download App
             </Button>
@@ -80,7 +80,7 @@ const Navbar = () => {
             size="sm" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
-            className="dark:text-white"
+            className="dark:text-white rounded-md"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -150,7 +150,7 @@ const Navbar = () => {
               </>
             )}
             <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
-              <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
+              <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full rounded-md">
                 <Download className="h-4 w-4 mr-2" />
                 Download App
               </Button>

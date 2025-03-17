@@ -23,20 +23,20 @@ const MathuraHeader: React.FC = () => {
         {/* Desktop navigation */}
         <div className="hidden md:flex items-center space-x-4">
           <Link to="/">
-            <Button variant="outline" className="rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
+            <Button variant="outline" className="rounded-md bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back
             </Button>
           </Link>
           <Link to="/">
-            <Button variant="outline" className="rounded-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
+            <Button variant="outline" className="rounded-md bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm shadow-md hover:bg-white/90 dark:hover:bg-gray-700/90 transition-all duration-300 dark:text-white dark:border-gray-700">
               <Home className="h-4 w-4 mr-2" />
               Home
             </Button>
           </Link>
           <ThemeToggle />
           <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer">
-            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark">
+            <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark rounded-md">
               <Download className="h-4 w-4 mr-2" />
               Download App
             </Button>
@@ -51,7 +51,7 @@ const MathuraHeader: React.FC = () => {
             size="sm" 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
-            className="dark:text-white"
+            className="dark:text-white rounded-md"
           >
             {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
@@ -100,7 +100,7 @@ const MathuraHeader: React.FC = () => {
               Jaipur
             </Link>
             <a href="https://apps.apple.com/in/app/yatrik/id6636484336" target="_blank" rel="noopener noreferrer" onClick={() => setIsMenuOpen(false)}>
-              <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full">
+              <Button className="bg-yatrik-yellow hover:bg-yatrik-yellow/90 text-yatrik-dark w-full rounded-md">
                 <Download className="h-4 w-4 mr-2" />
                 Download App
               </Button>
